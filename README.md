@@ -1,4 +1,7 @@
 # Tugas Kelompok 1 – Arsitektur Perangkat Lunak (2 KKA 512)
+=======
+# Tugas Kelompok 5 – Arsitektur Perangkat Lunak (2 KKA 512)
+>>>>>>> 0a47e9cd9f31abbc6d1f169eec1641ff69e4aac0
 
 Konteks & Keputusan Arsitektur (Pertemuan 5) serta Karakteristik Arsitektur & Atribut Kualitas (Pertemuan 6).
 
@@ -9,6 +12,11 @@ Konteks & Keputusan Arsitektur (Pertemuan 5) serta Karakteristik Arsitektur & At
 | Layanan inti | [salin dari tabel 2.2 pada dokumen tugas] |
 | Perwakilan kelompok | [nama, stambuk] |
 
+| Kelompok | Bagian I – Kelompok 05 |
+| Subsistem | Attendance Management |
+| Layanan inti | Layanan presensi kuliah: absen mahasiswa, pembukaan sesi oleh dosen, koreksi presensi, dan laporan |
+| Perwakilan kelompok | Putri Aulia Salsabila, 13020240032 |
+
 ## Anggota
 
 | No | Stambuk | Nama | Akun GitHub | Kode yang dikerjakan |
@@ -17,6 +25,10 @@ Konteks & Keputusan Arsitektur (Pertemuan 5) serta Karakteristik Arsitektur & At
 | 2 | | | @ | |
 | 3 | | | @ | |
 | 4 | | | @ | |
+| 1 |13020240032|Putri Aulia Salsabila| @pauliasalsabila2-rgb | |
+| 2 |13020240058|Annajhma Rasyid Sulaiman | @annajhmarasyid2005 | |
+| 3 |13020240| Andi Syawalia Zakira Fitri | @syawaliacawwax-ctrl | |
+| 4 |13020240| Deananda Hi.Muh.Arfah | @13020240258-ux | |
 
 ## Peta berkas dan penanggung jawab
 
@@ -41,6 +53,24 @@ Status: Belum / Draf / Selesai. Perbarui tabel ini setiap ada perubahan.
 ## Laporan PDF terakhir
 
 `hasil/TugasKel1_[Bagian]_Kelompok[XX].pdf` (contoh: `TugasKel1_I_Kelompok01.pdf`)
+| BAB I | laporan/BAB1-pendahuluan.md | Putri Aulia Salsabila | Belum |
+| A1 | laporan/A1-konteks-arsitektur.md | Annajhma Rasyid Sulaiman | Belum |
+| A2 | laporan/A2-stakeholder.md | Andi Syawalia Zakira Fitri | Belum |
+| A3 | laporan/A3-batasan.md | Deananda Hi.Muh.Arfah | Belum |
+| A4 | laporan/A4-asr.md | Putri Aulia Salsabila | Belum |
+| A5 | laporan/A5-keputusan-arsitektur.md dan adr/ | Annajhma Rasyid Sulaiman | Belum |
+| B1 | laporan/B1-karakteristik.md | Andi Syawalia Zakira Fitri | Belum |
+| B2 | laporan/B2-atribut-terukur.md | Deananda Hi.Muh.Arfah | Belum |
+| B3 | laporan/B3-tiga-struktur.md dan diagram/ | Putri Aulia Salsabila | Belum |
+| B4 | laporan/B4-iso-25010.md | Annajhma Rasyid Sulaiman | Belum |
+| B5 | laporan/B5-trade-off.md | Andi Syawalia Zakira Fitri | Belum |
+| BAB IV | laporan/BAB4-penutup.md | Deananda Hi.Muh.Arfah | Belum |
+| Pustaka | laporan/daftar-pustaka.md | Putri Aulia Salsabila | Belum |
+
+## Laporan PDF terakhir
+
+`hasil/TugasKel5_I_Kelompok05.pdf` (contoh: `TugasKel1_I_Kelompok01.pdf`)
+>>>>>>> 0a47e9cd9f31abbc6d1f169eec1641ff69e4aac0
 
 ## Aturan kerja singkat
 
