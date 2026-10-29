@@ -2,11 +2,11 @@
 
 <!-- Penanggung jawab: [Annajhma Rasyid Sulaiman] -->
 
-Berikut adalah analisis empat konteks arsitektur untuk layanan presensi kuliah pada subsistem *Attendance Management*:
+## Tabel Analisis Empat Konteks Arsitektur
 
-| Konteks Arsitektur | Kondisi Subsistem / Penjelasan |
+| Konteks Arsitektur | Kondisi Subsistem / Layanan Presensi Kuliah |
 | :--- | :--- |
-| **Teknis (Technical)** | Layanan presensi berbasis web dan mobile yang diakses secara bersamaan oleh ribuan mahasiswa menggunakan perangkat masing-masing melalui jaringan internet kampus, menuntut integrasi stabil dengan basis data akademik utama. |
-| **Siklus Hidup Proyek (Project Lifecycle)** | Sistem dikembangkan dan dipelihara secara bertahap oleh tim pengembang internal PDTI UMI, dengan pembaruan fitur berkala disesuaikan dengan kalender akademik dan evaluasi semester. |
-| **Bisnis (Business)** | Mendukung kebijakan operasional universitas dalam memvalidasi kehadiran mahasiswa secara akurat sebagai syarat administratif kelayakan mengikuti ujian semester. |
-| **Profesional (Professional)** | Dikelola dengan standar pengembangan perangkat lunak yang membatasi hak akses berdasarkan peran (mahasiswa, dosen, dan admin) serta menjaga privasi data kehadiran dari pihak yang tidak berkepentingan. |
+| **Teknis** | Layanan presensi terintegrasi dengan portal web/aplikasi kampus (KALAM/SPADA) dan basis data akademik pusat, yang dirancang untuk menangani lonjakan akses bersamaan (*concurrent access*) dari ribuan mahasiswa pada menit-menit awal perkuliahan. |
+| **Siklus Hidup Proyek** | Pengembangan, pemeliharaan, dan evaluasi layanan dikelola oleh tim IT/PDTI universitas, mencakup pengujian beban (*load testing*) sebelum awal semester serta pembaruan berkala berdasarkan umpan balik pengguna (mahasiswa dan staf akademik). |
+| **Bisnis** | Layanan ini berfungsi menyediakan rekapitulasi kehadiran yang transparan dan akurat sebagai komponen utama penentu kepatuhan mutlak terhadap aturan akademik universitas, khususnya syarat minimal kehadiran untuk mengikuti Ujian Akhir Semester (UAS). |
+| **Profesional** | Pengoperasian sistem berpedoman pada standar kualitas mutu perangkat lunak (seperti ISO/IEC 25010) untuk menjamin integritas data, mencegah duplikasi atau kehilangan data absensi, serta menjaga privasi data pengguna. |
