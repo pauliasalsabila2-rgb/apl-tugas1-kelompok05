@@ -1,0 +1,55 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Halaman-1" id="M0suFqOjkblPpgLfVaYC">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" plantUmlData="{&#xa;  &quot;data&quot;: &quot;@startuml\nskinparam BackgroundColor #FFFFFF\nskinparam ActivityBackgroundColor #F9F9F9\nskinparam RectangleBackgroundColor #FEFEFE\nskinparam DefaultTextAlignment center\n\ntitle Peta Power/Interest Stakeholder - Layanan Presensi Kuliah (Attendance Management)\n\nleft to right direction\nskinparam shadowing false\n\nrectangle \&quot;Kepentingan / Minat (Interest) →\&quot; {\n  rectangle \&quot;Pengaruh (Power) ↑\&quot; as power_high {\n    rectangle \&quot;&lt;b&gt;Keep satisfied (Puaskan)&lt;/b&gt;\\n\\n[ Auditor Mutu Kampus ]\\n(Power Tinggi, Interest Rendah)\&quot; as Q2 #FFD1DC\n    rectangle \&quot;&lt;b&gt;Manage closely (Kelola dengan erat)&lt;/b&gt;\\n\\n[ Biro Akademik ]\\n[ Tim IT / PDTI ]\\n(Power Tinggi, Interest Tinggi)\&quot; as Q1 #FFB347\n  }\n  \n  rectangle \&quot;Pengaruh (Power) ↓\&quot; as power_low {\n    rectangle \&quot;&lt;b&gt;Monitor (Pantau)&lt;/b&gt;\\n\\n[ Bagian Keuangan / Unit Lain ]\\n(Power Rendah, Interest Rendah)\&quot; as Q3 #E0E0E0\n    rectangle \&quot;&lt;b&gt;Keep informed (Beri informasi)&lt;/b&gt;\\n\\n[ Mahasiswa ]\\n[ Dosen Pengampu ]\\n(Power Rendah, Interest Tinggi)\&quot; as Q4 #B5EAD7\n  }\n}\n\n@enduml&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="M2ztsjPX76ecy0HLEDH7-1">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=10;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Kepentingan / Minat (Interest) →" plantUmlId="c_0" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=5;fillColor=#FEFEFE;strokeColor=#181818;verticalAlign=top;align=center;spacingTop=-4;fontSize=14;fontStyle=1;whiteSpace=wrap;shadow=0;" plantUmlBaseValue="Kepentingan / Minat (Interest) →" id="M2ztsjPX76ecy0HLEDH7-2">
+          <mxCell parent="M2ztsjPX76ecy0HLEDH7-1" style="rounded=1;absoluteArcSize=1;arcSize=5;fillColor=#FEFEFE;strokeColor=#181818;verticalAlign=top;align=center;spacingTop=-4;fontSize=14;fontStyle=1;whiteSpace=wrap;shadow=0;" vertex="1">
+            <mxGeometry height="576" width="337" x="168" y="66" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Pengaruh (Power) ↑" plantUmlId="c_1" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=5;fillColor=#FEFEFE;strokeColor=#181818;verticalAlign=top;align=center;spacingTop=-4;fontSize=14;fontStyle=1;whiteSpace=wrap;shadow=0;" plantUmlBaseValue="Pengaruh (Power) ↑" id="M2ztsjPX76ecy0HLEDH7-3">
+          <mxCell parent="M2ztsjPX76ecy0HLEDH7-2" style="rounded=1;absoluteArcSize=1;arcSize=5;fillColor=#FEFEFE;strokeColor=#181818;verticalAlign=top;align=center;spacingTop=-4;fontSize=14;fontStyle=1;whiteSpace=wrap;shadow=0;" vertex="1">
+            <mxGeometry height="253" width="307" x="15" y="311" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;Keep satisfied (Puaskan)&lt;/b&gt;&lt;br&gt;&lt;br&gt;[ Auditor Mutu Kampus ]&lt;br&gt;(Power Tinggi, Interest Rendah)" plantUmlId="n_2" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=3;strokeWidth=1;fillColor=#FFD1DC;strokeColor=#181818;whiteSpace=wrap;fontSize=14;shadow=0;align=center;html=1;" plantUmlBaseValue="&lt;b&gt;Keep satisfied (Puaskan)&lt;/b&gt;&lt;br&gt;&lt;br&gt;[ Auditor Mutu Kampus ]&lt;br&gt;(Power Tinggi, Interest Rendah)" id="M2ztsjPX76ecy0HLEDH7-4">
+          <mxCell parent="M2ztsjPX76ecy0HLEDH7-3" style="rounded=1;absoluteArcSize=1;arcSize=3;strokeWidth=1;fillColor=#FFD1DC;strokeColor=#181818;whiteSpace=wrap;fontSize=14;shadow=0;align=center;html=1;" vertex="1">
+            <mxGeometry height="78" width="246" x="30.5" y="163" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;Manage closely (Kelola dengan erat)&lt;/b&gt;&lt;br&gt;&lt;br&gt;[ Biro Akademik ]&lt;br&gt;[ Tim IT / PDTI ]&lt;br&gt;(Power Tinggi, Interest Tinggi)" plantUmlId="n_3" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=3;strokeWidth=1;fillColor=#FFB347;strokeColor=#181818;whiteSpace=wrap;fontSize=14;shadow=0;align=center;html=1;" plantUmlBaseValue="&lt;b&gt;Manage closely (Kelola dengan erat)&lt;/b&gt;&lt;br&gt;&lt;br&gt;[ Biro Akademik ]&lt;br&gt;[ Tim IT / PDTI ]&lt;br&gt;(Power Tinggi, Interest Tinggi)" id="M2ztsjPX76ecy0HLEDH7-5">
+          <mxCell parent="M2ztsjPX76ecy0HLEDH7-3" style="rounded=1;absoluteArcSize=1;arcSize=3;strokeWidth=1;fillColor=#FFB347;strokeColor=#181818;whiteSpace=wrap;fontSize=14;shadow=0;align=center;html=1;" vertex="1">
+            <mxGeometry height="94" width="277" x="15" y="34" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Pengaruh (Power) ↓" plantUmlId="c_4" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=5;fillColor=#FEFEFE;strokeColor=#181818;verticalAlign=top;align=center;spacingTop=-4;fontSize=14;fontStyle=1;whiteSpace=wrap;shadow=0;" plantUmlBaseValue="Pengaruh (Power) ↓" id="M2ztsjPX76ecy0HLEDH7-6">
+          <mxCell parent="M2ztsjPX76ecy0HLEDH7-2" style="rounded=1;absoluteArcSize=1;arcSize=5;fillColor=#FEFEFE;strokeColor=#181818;verticalAlign=top;align=center;spacingTop=-4;fontSize=14;fontStyle=1;whiteSpace=wrap;shadow=0;" vertex="1">
+            <mxGeometry height="253" width="283" x="27" y="34" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;Monitor (Pantau)&lt;/b&gt;&lt;br&gt;&lt;br&gt;[ Bagian Keuangan / Unit Lain ]&lt;br&gt;(Power Rendah, Interest Rendah)" plantUmlId="n_5" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=3;strokeWidth=1;fillColor=#E0E0E0;strokeColor=#181818;whiteSpace=wrap;fontSize=14;shadow=0;align=center;html=1;" plantUmlBaseValue="&lt;b&gt;Monitor (Pantau)&lt;/b&gt;&lt;br&gt;&lt;br&gt;[ Bagian Keuangan / Unit Lain ]&lt;br&gt;(Power Rendah, Interest Rendah)" id="M2ztsjPX76ecy0HLEDH7-7">
+          <mxCell parent="M2ztsjPX76ecy0HLEDH7-6" style="rounded=1;absoluteArcSize=1;arcSize=3;strokeWidth=1;fillColor=#E0E0E0;strokeColor=#181818;whiteSpace=wrap;fontSize=14;shadow=0;align=center;html=1;" vertex="1">
+            <mxGeometry height="78" width="253" x="15" y="163" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;Keep informed (Beri informasi)&lt;/b&gt;&lt;br&gt;&lt;br&gt;[ Mahasiswa ]&lt;br&gt;[ Dosen Pengampu ]&lt;br&gt;(Power Rendah, Interest Tinggi)" plantUmlId="n_6" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=3;strokeWidth=1;fillColor=#B5EAD7;strokeColor=#181818;whiteSpace=wrap;fontSize=14;shadow=0;align=center;html=1;" plantUmlBaseValue="&lt;b&gt;Keep informed (Beri informasi)&lt;/b&gt;&lt;br&gt;&lt;br&gt;[ Mahasiswa ]&lt;br&gt;[ Dosen Pengampu ]&lt;br&gt;(Power Rendah, Interest Tinggi)" id="M2ztsjPX76ecy0HLEDH7-8">
+          <mxCell parent="M2ztsjPX76ecy0HLEDH7-6" style="rounded=1;absoluteArcSize=1;arcSize=3;strokeWidth=1;fillColor=#B5EAD7;strokeColor=#181818;whiteSpace=wrap;fontSize=14;shadow=0;align=center;html=1;" vertex="1">
+            <mxGeometry height="94" width="246" x="18.5" y="34" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Peta Power/Interest Stakeholder - Layanan Presensi Kuliah (Attendance Management)" plantUmlId="title_7" plantUmlBaseStyle="text;html=1;fillColor=none;strokeColor=none;fontSize=14;fontStyle=1;fontColor=#000000;align=center;verticalAlign=middle;" plantUmlBaseValue="Peta Power/Interest Stakeholder - Layanan Presensi Kuliah (Attendance Management)" id="M2ztsjPX76ecy0HLEDH7-9">
+          <mxCell parent="M2ztsjPX76ecy0HLEDH7-1" style="text;html=1;fillColor=none;strokeColor=none;fontSize=14;fontStyle=1;fontColor=#000000;align=center;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="24" width="613" x="30" y="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
