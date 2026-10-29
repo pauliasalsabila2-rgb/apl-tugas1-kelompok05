@@ -1,0 +1,100 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Halaman-1" id="9XvfKWbTin1CwMMdl7ta">
+    <mxGraphModel dx="774" dy="1620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" plantUmlData="{&#xa;  &quot;data&quot;: &quot;@startuml B3-Struktur-CC\nskinparam defaultFontName Arial\nskinparam defaultFontSize 12\nskinparam rectangle {\n    RoundCorner 8\n}\n\ntitle STRUKTUR KOMPONEN DAN KONEKTOR (C&amp;C)\ncaption Layanan Presensi Kuliah (Attendance Management - Kelompok I-5)\n\n&#39; Komponen yang berjalan saat sistem aktif\nrectangle \&quot;Browser / Mobile App\\n(Mahasiswa &amp; Dosen)\&quot; as Klien #D1ECF1\nrectangle \&quot;Server Web Presensi\&quot; as WebServer #E2E3E5\nrectangle \&quot;Cache\\n(Sesi &amp; Token QR)\&quot; as Cache #FFF3CD\nrectangle \&quot;Antrean Pesan\\n(Message Queue)\&quot; as Queue #FFF3CD\nrectangle \&quot;Worker Presensi\&quot; as Worker #E2E3E5\nrectangle \&quot;Basis Data Akademik\\n(SIAKAD UMI)\&quot; as Database #F8D7DA\n\n&#39; Konektor dan jenis interaksinya\nKlien --&gt; WebServer : HTTPS\nWebServer --&gt; Cache : baca / tulis\nWebServer --&gt; Queue : kirim (publish)\nQueue --&gt; Worker : ambil (consume)\nWorker --&gt; Database : SQL\n\n&#39; Keterangan cara membaca diagram\nnote bottom of Klien\n  &lt;b&gt;Cara Membaca:&lt;/b&gt;\n  Kotak = komponen yang berjalan (proses, layanan, penyimpanan). \n  Panah = konektor, dengan jenis interaksi di atasnya.\n  Permintaan absensi massal masuk ke antrean pesan dan diproses bertahap oleh worker: \n  hasil sedikit tertunda, tetapi sistem tahan terhadap lonjakan beban puncak (ASR 1).\nend note\n\n@enduml&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="Y6TO4IA3WxdF0mM1zbZJ-1">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=10;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Browser / Mobile App&#xa;(Mahasiswa &amp; Dosen)" plantUmlId="n_0" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=8;strokeWidth=1;fillColor=#D1ECF1;strokeColor=#181818;whiteSpace=wrap;fontSize=12;fontFamily=Arial;" plantUmlBaseValue="Browser / Mobile App&#xa;(Mahasiswa &amp; Dosen)" id="Y6TO4IA3WxdF0mM1zbZJ-2">
+          <mxCell parent="Y6TO4IA3WxdF0mM1zbZJ-1" style="rounded=1;absoluteArcSize=1;arcSize=8;strokeWidth=1;fillColor=#D1ECF1;strokeColor=#181818;whiteSpace=wrap;fontSize=12;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="49" width="186" x="30" y="66" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Server Web Presensi" plantUmlId="n_1" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=8;strokeWidth=1;fillColor=#E2E3E5;strokeColor=#181818;whiteSpace=wrap;fontSize=12;fontFamily=Arial;" plantUmlBaseValue="Server Web Presensi" id="Y6TO4IA3WxdF0mM1zbZJ-3">
+          <mxCell parent="Y6TO4IA3WxdF0mM1zbZJ-1" style="rounded=1;absoluteArcSize=1;arcSize=8;strokeWidth=1;fillColor=#E2E3E5;strokeColor=#181818;whiteSpace=wrap;fontSize=12;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="49" width="181" x="32.74000000000001" y="216.33" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Cache&#xa;(Sesi &amp; Token QR)" plantUmlId="n_2" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=8;strokeWidth=1;fillColor=#FFF3CD;strokeColor=#181818;whiteSpace=wrap;fontSize=12;fontFamily=Arial;" plantUmlBaseValue="Cache&#xa;(Sesi &amp; Token QR)" id="Y6TO4IA3WxdF0mM1zbZJ-4">
+          <mxCell parent="Y6TO4IA3WxdF0mM1zbZJ-1" style="rounded=1;absoluteArcSize=1;arcSize=8;strokeWidth=1;fillColor=#FFF3CD;strokeColor=#181818;whiteSpace=wrap;fontSize=12;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="49" width="151" x="31.260000000000005" y="354" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Antrean Pesan&#xa;(Message Queue)" plantUmlId="n_3" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=8;strokeWidth=1;fillColor=#FFF3CD;strokeColor=#181818;whiteSpace=wrap;fontSize=12;fontFamily=Arial;" plantUmlBaseValue="Antrean Pesan&#xa;(Message Queue)" id="Y6TO4IA3WxdF0mM1zbZJ-5">
+          <mxCell parent="Y6TO4IA3WxdF0mM1zbZJ-1" style="rounded=1;absoluteArcSize=1;arcSize=8;strokeWidth=1;fillColor=#FFF3CD;strokeColor=#181818;whiteSpace=wrap;fontSize=12;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="49" width="150" x="217.26" y="354" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Worker Presensi" plantUmlId="n_4" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=8;strokeWidth=1;fillColor=#E2E3E5;strokeColor=#181818;whiteSpace=wrap;fontSize=12;fontFamily=Arial;" plantUmlBaseValue="Worker Presensi" id="Y6TO4IA3WxdF0mM1zbZJ-6">
+          <mxCell parent="Y6TO4IA3WxdF0mM1zbZJ-1" style="rounded=1;absoluteArcSize=1;arcSize=8;strokeWidth=1;fillColor=#E2E3E5;strokeColor=#181818;whiteSpace=wrap;fontSize=12;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="49" width="154" x="215.26" y="479" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Basis Data Akademik&#xa;(SIAKAD UMI)" plantUmlId="n_5" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=8;strokeWidth=1;fillColor=#F8D7DA;strokeColor=#181818;whiteSpace=wrap;fontSize=12;fontFamily=Arial;" plantUmlBaseValue="Basis Data Akademik&#xa;(SIAKAD UMI)" id="Y6TO4IA3WxdF0mM1zbZJ-7">
+          <mxCell parent="Y6TO4IA3WxdF0mM1zbZJ-1" style="rounded=1;absoluteArcSize=1;arcSize=8;strokeWidth=1;fillColor=#F8D7DA;strokeColor=#181818;whiteSpace=wrap;fontSize=12;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="49" width="174" x="205.36" y="604" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="HTTPS" plantUmlId="e_6" plantUmlBaseStyle="strokeColor=#181818;fontColor=#000000;fontSize=12;html=1;labelBackgroundColor=#FFFFFF;labelPosition=right;align=left;endArrow=classicThin;endFill=1;fontFamily=Arial;curved=0;rounded=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="HTTPS" id="Y6TO4IA3WxdF0mM1zbZJ-8">
+          <mxCell edge="1" parent="Y6TO4IA3WxdF0mM1zbZJ-1" source="Y6TO4IA3WxdF0mM1zbZJ-2" style="strokeColor=#181818;fontColor=#000000;fontSize=12;html=1;labelBackgroundColor=#FFFFFF;labelPosition=right;align=left;endArrow=classicThin;endFill=1;fontFamily=Arial;curved=0;rounded=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="Y6TO4IA3WxdF0mM1zbZJ-3">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="24" y="-13" as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="baca / tulis" plantUmlId="e_7" plantUmlBaseStyle="strokeColor=#181818;fontColor=#000000;fontSize=12;html=1;labelBackgroundColor=#FFFFFF;labelPosition=right;align=left;endArrow=classicThin;endFill=1;fontFamily=Arial;curved=0;rounded=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="baca / tulis" id="Y6TO4IA3WxdF0mM1zbZJ-9">
+          <mxCell edge="1" parent="Y6TO4IA3WxdF0mM1zbZJ-1" source="Y6TO4IA3WxdF0mM1zbZJ-3" style="strokeColor=#181818;fontColor=#000000;fontSize=12;html=1;labelBackgroundColor=#FFFFFF;labelPosition=right;align=left;endArrow=classicThin;endFill=1;fontFamily=Arial;curved=0;rounded=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="Y6TO4IA3WxdF0mM1zbZJ-4">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="42" y="6" as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="kirim (publish)" plantUmlId="e_8" plantUmlBaseStyle="strokeColor=#181818;fontColor=#000000;fontSize=12;html=1;labelBackgroundColor=#FFFFFF;labelPosition=right;align=left;endArrow=classicThin;endFill=1;fontFamily=Arial;curved=0;rounded=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="kirim (publish)" id="Y6TO4IA3WxdF0mM1zbZJ-10">
+          <mxCell edge="1" parent="Y6TO4IA3WxdF0mM1zbZJ-1" source="Y6TO4IA3WxdF0mM1zbZJ-3" style="strokeColor=#181818;fontColor=#000000;fontSize=12;html=1;labelBackgroundColor=#FFFFFF;labelPosition=right;align=left;endArrow=classicThin;endFill=1;fontFamily=Arial;curved=0;rounded=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="Y6TO4IA3WxdF0mM1zbZJ-5">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="61" y="6" as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="ambil (consume)" plantUmlId="e_9" plantUmlBaseStyle="strokeColor=#181818;fontColor=#000000;fontSize=12;html=1;labelBackgroundColor=#FFFFFF;labelPosition=right;align=left;endArrow=classicThin;endFill=1;fontFamily=Arial;curved=0;rounded=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="ambil (consume)" id="Y6TO4IA3WxdF0mM1zbZJ-11">
+          <mxCell edge="1" parent="Y6TO4IA3WxdF0mM1zbZJ-1" source="Y6TO4IA3WxdF0mM1zbZJ-5" style="strokeColor=#181818;fontColor=#000000;fontSize=12;html=1;labelBackgroundColor=#FFFFFF;labelPosition=right;align=left;endArrow=classicThin;endFill=1;fontFamily=Arial;curved=0;rounded=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="Y6TO4IA3WxdF0mM1zbZJ-6">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="59" as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="SQL" plantUmlId="e_10" plantUmlBaseStyle="strokeColor=#181818;fontColor=#000000;fontSize=12;html=1;labelBackgroundColor=#FFFFFF;labelPosition=right;align=left;endArrow=classicThin;endFill=1;fontFamily=Arial;curved=0;rounded=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="SQL" id="Y6TO4IA3WxdF0mM1zbZJ-12">
+          <mxCell edge="1" parent="Y6TO4IA3WxdF0mM1zbZJ-1" source="Y6TO4IA3WxdF0mM1zbZJ-6" style="strokeColor=#181818;fontColor=#000000;fontSize=12;html=1;labelBackgroundColor=#FFFFFF;labelPosition=right;align=left;endArrow=classicThin;endFill=1;fontFamily=Arial;curved=0;rounded=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="Y6TO4IA3WxdF0mM1zbZJ-7">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="17" as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;Cara Membaca:&lt;/b&gt;&lt;br&gt;Kotak = komponen yang berjalan (proses, layanan, penyimpanan).&lt;br&gt;Panah = konektor, dengan jenis interaksi di atasnya.&lt;br&gt;Permintaan absensi massal masuk ke antrean pesan dan diproses bertahap oleh worker:&lt;br&gt;hasil sedikit tertunda, tetapi sistem tahan terhadap lonjakan beban puncak (ASR 1)." plantUmlId="note_11" plantUmlBaseStyle="shape=note;size=10;fillColor=#FEFFDD;strokeColor=#181818;fontSize=12;whiteSpace=wrap;align=left;spacingLeft=4;fontFamily=Arial;html=1;" plantUmlBaseValue="&lt;b&gt;Cara Membaca:&lt;/b&gt;&lt;br&gt;Kotak = komponen yang berjalan (proses, layanan, penyimpanan).&lt;br&gt;Panah = konektor, dengan jenis interaksi di atasnya.&lt;br&gt;Permintaan absensi massal masuk ke antrean pesan dan diproses bertahap oleh worker:&lt;br&gt;hasil sedikit tertunda, tetapi sistem tahan terhadap lonjakan beban puncak (ASR 1)." id="Y6TO4IA3WxdF0mM1zbZJ-13">
+          <mxCell parent="Y6TO4IA3WxdF0mM1zbZJ-1" style="shape=note;size=10;fillColor=#FEFFDD;strokeColor=#181818;fontSize=12;whiteSpace=wrap;align=left;spacingLeft=4;fontFamily=Arial;html=1;" vertex="1">
+            <mxGeometry height="87" width="571" x="248.74" y="191" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="noteptr_12" plantUmlBaseStyle="shape=triangle;fillColor=#FEFFDD;strokeColor=#181818;strokeWidth=0.5;fontSize=12;fontFamily=Arial;direction=north;part=1;" plantUmlBaseValue="" id="Y6TO4IA3WxdF0mM1zbZJ-14">
+          <mxCell parent="Y6TO4IA3WxdF0mM1zbZJ-13" style="shape=triangle;fillColor=#FEFFDD;strokeColor=#181818;strokeWidth=0.5;fontSize=12;fontFamily=Arial;direction=north;part=1;" vertex="1">
+            <mxGeometry height="449" width="8" x="281" y="-448" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="STRUKTUR KOMPONEN DAN KONEKTOR (C&amp;amp;C)" plantUmlId="title_13" plantUmlBaseStyle="text;html=1;fillColor=none;strokeColor=none;fontSize=14;fontStyle=1;fontColor=#000000;align=center;verticalAlign=middle;fontFamily=Arial;" plantUmlBaseValue="STRUKTUR KOMPONEN DAN KONEKTOR (C&amp;amp;C)" id="Y6TO4IA3WxdF0mM1zbZJ-15">
+          <mxCell parent="Y6TO4IA3WxdF0mM1zbZJ-1" style="text;html=1;fillColor=none;strokeColor=none;fontSize=14;fontStyle=1;fontColor=#000000;align=center;verticalAlign=middle;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="24" width="296" x="283" y="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Layanan Presensi Kuliah (Attendance Management - Kelompok I-5)" plantUmlId="caption_0" plantUmlBaseStyle="text;html=1;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;" plantUmlBaseValue="Layanan Presensi Kuliah (Attendance Management - Kelompok I-5)" id="Y6TO4IA3WxdF0mM1zbZJ-16">
+          <mxCell parent="Y6TO4IA3WxdF0mM1zbZJ-1" style="text;html=1;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="18" width="466" x="191.87" y="657" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
