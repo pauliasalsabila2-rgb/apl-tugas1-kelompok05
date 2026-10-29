@@ -8,7 +8,7 @@
 ## Pertanyaan dan ringkasan jawaban
 | Pertanyaan | Ringkasan jawaban |
 |---|---|
-| Bagaimana kemudahan akses halaman presensi di SPADA/SIAKAD saat jam kuliah dimulai? | Sering terjadi perlambatan pemuatan halaman (*loading*) karena diakses ribuan mahasiswa secara bersamaan pada menit-menit awal perkuliahan. |
+| Bagaimana kemudahan akses halaman presensi di KALAM saat jam kuliah dimulai? | Sering terjadi perlambatan pemuatan halaman (*loading*) karena diakses ribuan mahasiswa secara bersamaan pada menit-menit awal perkuliahan. |
 | Apa fitur yang paling Anda harapkan dari sistem absensi ini? | Fitur notifikasi instan dan rekam riwayat kehadiran yang langsung terbarui agar transparan dan mudah dipantau. |
 
 ## Temuan yang dipakai pada laporan
