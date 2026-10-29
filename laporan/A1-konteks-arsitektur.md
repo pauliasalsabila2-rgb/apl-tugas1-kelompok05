@@ -2,11 +2,13 @@
 
 <!-- Penanggung jawab: [Annajhma Rasyid Sulaiman] -->
 
-## Tabel Analisis Empat Konteks Arsitektur
+## Layanan Presensi Kuliah – Attendance Management
 
-| Konteks Arsitektur | Kondisi Subsistem / Layanan Presensi Kuliah |
-| :--- | :--- |
-| **Teknis** | Layanan presensi terintegrasi dengan portal web/aplikasi kampus (KALAM/SPADA) dan basis data akademik pusat, yang dirancang untuk menangani lonjakan akses bersamaan (*concurrent access*) dari ribuan mahasiswa pada menit-menit awal perkuliahan. |
-| **Siklus Hidup Proyek** | Pengembangan, pemeliharaan, dan evaluasi layanan dikelola oleh tim IT/PDTI universitas, mencakup pengujian beban (*load testing*) sebelum awal semester serta pembaruan berkala berdasarkan umpan balik pengguna (mahasiswa dan staf akademik). |
-| **Bisnis** | Layanan ini berfungsi menyediakan rekapitulasi kehadiran yang transparan dan akurat sebagai komponen utama penentu kepatuhan mutlak terhadap aturan akademik universitas, khususnya syarat minimal kehadiran untuk mengikuti Ujian Akhir Semester (UAS). |
-| **Profesional** | Pengoperasian sistem berpedoman pada standar kualitas mutu perangkat lunak (seperti ISO/IEC 25010) untuk menjamin integritas data, mencegah duplikasi atau kehilangan data absensi, serta menjaga privasi data pengguna. |
+Layanan presensi kuliah merupakan bagian dari subsistem *Attendance Management* dalam Smart Campus UMI yang mendukung pencatatan dan pengelolaan kehadiran mahasiswa. Analisis empat konteks arsitektur dilakukan untuk mengidentifikasi aspek teknis, siklus hidup proyek, bisnis, dan profesional yang perlu dipertimbangkan dalam perancangan layanan presensi kuliah.
+
+| Konteks Arsitektur | Kondisi Layanan Presensi Kuliah |
+|---|---|
+| **Teknis** | Layanan presensi kuliah memerlukan mekanisme autentikasi pengguna, pencatatan kehadiran, dan penyimpanan data yang terintegrasi dengan informasi mahasiswa serta jadwal perkuliahan. Arsitektur perlu mendukung akses serentak, keamanan data, dan konsistensi status kehadiran. |
+| **Siklus Hidup Proyek** | Pengembangan layanan presensi perlu mempertimbangkan tahapan analisis kebutuhan, perancangan, pengujian, penerapan, dan pemeliharaan. Arsitektur harus memudahkan penyesuaian aturan presensi, perbaikan kesalahan, dan pengembangan fitur tanpa mengganggu kegiatan perkuliahan. |
+| **Bisnis** | Layanan presensi bertujuan membantu mahasiswa, dosen, dan pengelola akademik dalam mencatat, memantau, serta merekap kehadiran secara efisien. Arsitektur harus mendukung pembukaan sesi presensi, koreksi kehadiran, dan penyediaan laporan yang akurat untuk kebutuhan administrasi akademik. |
+| **Profesional** | Pengelolaan layanan presensi harus memperhatikan kerahasiaan data mahasiswa, kejelasan hak akses, dan tanggung jawab pengelola sistem. Arsitektur perlu menyediakan pembatasan akses berdasarkan peran serta pencatatan perubahan data agar proses koreksi presensi dapat dipertanggungjawabkan. |
