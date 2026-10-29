@@ -3,7 +3,7 @@
 - **Tanggal:** 26-10-2026
 - **Responden (peran saja):** Mahasiswa Aktif Semester 5 (R1)
 - **Pewawancara:** Annajhma Rasyid Sulaiman
-- **Layanan yang dibahas:** Layanan presensi kuliah (absen mahasiswa)[cite: 2]
+- **Layanan yang dibahas:** Layanan presensi kuliah (absen mahasiswa)
 
 ## Pertanyaan dan ringkasan jawaban
 | Pertanyaan | Ringkasan jawaban |
