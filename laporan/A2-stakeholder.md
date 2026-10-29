@@ -1,22 +1,21 @@
 # A2. Stakeholder dan Peta Power/Interest
 
 <!-- Penanggung jawab: [Annajhma Rasyid Sulaiman] -->
+## 1. Stakeholder Register
 
-## 1. Register Stakeholder Layanan Presensi Kuliah
-Berikut adalah daftar minimal 6 stakeholder yang terlibat dalam sistem layanan presensi kuliah (*Attendance Management*):
+Berdasarkan hasil wawancara dengan 5 responden (3 Mahasiswa dari berbagai angkatan, 1 Dosen Pengampu, dan 1 Staf Biro Akademik) serta keterlibatan tim teknis, berikut adalah *Stakeholder Register* untuk Layanan Presensi Kuliah:
 
-| No | Stakeholder | Kelompok | Kebutuhan Utama & Ekspektasi Kualitas | Power / Interest | Strategi |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | **Mahasiswa** | Pengguna akhir | Melakukan absen dengan cepat, mudah melalui perangkat seluler, serta melihat rekap kehadiran secara real-time. | Rendah / Tinggi | Keep informed (Berikan informasi) |
-| 2 | **Dosen Pengampu** | Pengguna akhir | Membuka sesi presensi kuliah dengan mudah, melakukan koreksi presensi mahasiswa yang valid, dan mengunduh laporan kehadiran. | Sedang / Tinggi | Keep informed / Manage closely |
-| 3 | **Biro Akademik** | Manajer bisnis | Memastikan data rekap kehadiran akurat dan terintegrasi penuh sebagai syarat administratif kelayakan ujian mahasiswa. | Tinggi / Tinggi | Manage closely (Kelola dengan erat) |
-| 4 | **Tim IT / PDTI** | Tim operasional | Menjaga ketersediaan sistem, menangani lonjakan akses saat jam perkuliahan dimulai, dan memelihara infrastruktur server. | Tinggi / Tinggi | Manage closely (Kelola dengan erat) |
-| 5 | **Bagian Keuangan / Unit Terkait** | Manajer bisnis / internal | Memanfaatkan data kehadiran untuk keperluan audit kedisiplinan atau evaluasi kegiatan akademik. | Sedang / Rendah | Keep satisfied (Puaskan) |
-| 6 | **Auditor Mutu Kampus** | Pihak eksternal | Memastikan proses pencatatan absensi transparan, akurat, dan dapat diaudit sewaktu-waktu sesuai standar mutu institusi. | Tinggi / Rendah | Keep satisfied (Puaskan) |
+| Stakeholder | Kelompok | Kebutuhan Utama | Ekspektasi Kualitas | Prioritas |
+| :--- | :--- | :--- | :--- | :--- |
+| **Mahasiswa (Maba, Sem 3, Sem 5)** | Pengguna Akhir | Melakukan presensi dengan cepat di kelas, melihat status konfirmasi kehadiran secara *real-time*, antarmuka yang sederhana, serta adanya toleransi/sinkronisasi saat koneksi internet kelas melambat. | *Usability* tinggi, *responsiveness* (< 2 detik), *offline resilience* (penyimpanan lokal sementara), dan kejelasan navigasi UI. | Tinggi |
+| **Dosen Pengampu** | Pengguna Akhir | Membuka/menutup sesi perkuliahan tanpa *loading* lama, memantau kehadiran mahasiswa di kelas, serta menyetujui/menolak (*approval*) permohonan koreksi presensi. | *Reliability* tinggi, antarmuka sederhana (*ease of use*), dan alur persetujuan koreksi presensi yang efisien. | Tinggi |
+| **Staf Biro Akademik** | Manajer Bisnis | Menerima rekapitulasi data kehadiran yang akurat, tidak dapat dimanipulasi, dan siap diekspor sebagai syarat kelayakan mahasiswa mengikuti ujian akhir semester. | *Accuracy*, *integrity*, *auditability*, dan kemudahan eksportasi laporan rekapitulasi. | Tinggi |
+| **Tim Pengembang (PDTI UMI)** | Tim Pengembang | Membangun modul presensi yang terintegrasi rapi dengan basis data SIAKAD UMI dan mudah dirawat. | *Maintainability*, *code reusability*, dan kemudahan integrasi API dengan sistem *legacy*. | Sedang |
+| **Tim Operasional Server** | Tim Operasional | Memastikan server tetap stabil dan tidak *down* saat terjadi lonjakan akses serentak di menit-menit awal jam perkuliahan. | *High Availability* (99.9%) dan *Performance/Scalability* yang baik pada jam puncak. | Tinggi |
+| **Auditor Mutu Internal UMI** | Pihak Eksternal | Memastikan kesesuaian jumlah tatap muka perkuliahan dan keabsahan bukti kehadiran sesuai standar penjaminan mutu kampus. | *Auditability* dan keberadaan jejak audit (*audit trail*) yang aman. | Sedang |
 
-## 2. Analisis Peta Power/Interest (Mendelow)
-* **Manage Closely (Pengaruh Tinggi, Kepentingan Tinggi):** Biro Akademik dan Tim IT (PDTI). Kedua pihak ini memegang kendali atas kebijakan operasional dan infrastruktur teknis sehingga harus dilibatkan secara aktif dalam setiap keputusan arsitektur.
-* **Keep Satisfied (Pengaruh Tinggi, Kepentingan Rendah):** Auditor Mutu Kampus. Mereka memiliki kewenangan mengevaluasi tetapi tidak berdampak langsung pada operasional harian, sehingga cukup dipastikan sistem memenuhi standar kepatuhan.
-* **Keep Informed (Pengaruh Rendah, Kepentingan Tinggi):** Mahasiswa dan Dosen Pengampu. Mereka adalah pengguna utama yang paling merasakan dampak sistem, sehingga perlu rutin diberi informasi pembaruan dan dimintai umpan balik.
-* **Monitor (Pengaruh Rendah, Kepentingan Rendah):** Pihak eksternal atau utilitas pendukung lain yang hanya memerlukan pemantauan berkala.
-  [diagram modul](../diagram/A2-peta-power-interest.png)
+---
+
+## 2. Peta Power/Interest (Mendelow) dan Strategi
+
+Posisi tiap stakeholder pada Peta *Power/Interest* digambarkan pada diagram `diagram/A2-peta-power-interest.png`. Berikut adalah pembagian kuadran dan strategi pengelolaannya:
