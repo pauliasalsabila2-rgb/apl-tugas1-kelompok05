@@ -2,17 +2,16 @@
 
 <!-- Penanggung jawab: [Annajhma Rasyid Sulaiman] -->
 
-Berikut adalah tiga Kebutuhan Signifikan Secara Arsitektural (*Architecturally Significant Requirements* - ASR) untuk layanan presensi kuliah (*Attendance Management*):
+Berikut adalah 3 Kebutuhan Signifikan Secara Arsitektural (*Architecturally Significant Requirements* / ASR) pada Layanan Presensi Kuliah:
 
-## 1. ASR Atribut Kualitas (Kinerja & Lonjakan Beban Puncak)
-* **Pernyataan ASR:** "Saat jam pergantian perkuliahan dimulai, ribuan mahasiswa melakukan absensi secara bersamaan (*concurrent access*), dan halaman/proses pencatatan absensi harus merespons dalam waktu kurang dari 3 detik."
-* **Pengaruh pada Arsitektur:** Kebutuhan ini sangat memengaruhi desain arsitektur karena menuntut penerapan mekanisme penanganan beban tinggi (*load balancing*), penggunaan *caching* data sesi aktif, serta optimalisasi kueri basis data agar server tidak mengalami *bottleneck* atau penumpukan antrean koneksi.
+### 1. ASR 1: Kinerja dan Transaksi Bersamaan (Performance & Concurrency)
+* **Persyaratan:** Saat jam pergantian perkuliahan puncak (misal pukul 08.00 WITA), sistem harus mampu menangani hingga 3.000 permintaan absensi masuk secara bersamaan (*concurrent requests*) dengan waktu tanggap (*response time*) halaman kurang dari 2 detik.
+* **Alasan Memengaruhi Arsitektur:** Lonjakan akses serentak ini menuntut perancangan arsitektur yang tidak membebani basis data secara langsung. Oleh karena itu, sistem memerlukan komponen antrean pesan (*message queue*) dan *in-memory cache* untuk mengelola lalu lintas data yang padat agar server tidak mengalami *overhead* atau *crash*.
 
-## 2. ASR Fungsional (Keandalan dan Validasi Absensi)
-* **Pernyataan ASR:** "Sistem harus memastikan bahwa mahasiswa hanya dapat melakukan absensi pada sesi kuliah yang aktif dan sesuai dengan jadwal akademik riil yang divalidasi oleh dosen pengampu."
-* **Pengaruh pada Arsitektur:** Kebutuhan ini mengharuskan perancangan lapisan logika bisnis (*business logic layer*) yang ketat untuk melakukan validasi waktu nyata (*real-time validation*) terhadap status sesi kelas, serta mencegah manipulasi data absensi dari perangkat pengguna.
+### 2. ASR 2: Integritas Data dan Keamanan Anti-Kecurangan (Data Integrity & Anti-Fraud)
+* **Persyaratan:** Sistem harus memiliki mekanisme keamanan yang ketat untuk mencegah praktik kecurangan seperti pemalsuan lokasi (*fake GPS*) atau penitipan absen menggunakan tangkapan layar (*screenshot*) QR code milik teman.
+* **Alasan Memengaruhi Arsitektur:** Persyaratan keamanan ini mengharuskan arsitektur mendukung modul validasi ganda, yaitu kombinasi pemindaian QR code dinamis (yang diperbarui otomatis setiap beberapa detik di layar kelas) serta verifikasi kesesuaian koordinat GPS perangkat mahasiswa dengan lokasi radius kelas.
 
-## 3. ASR Batasan (Keamanan dan Integritas Data Kehadiran)
-* **Pernyataan ASR:** "Seluruh pencatatan riwayat kehadiran mahasiswa wajib dilindungi dari modifikasi ilegal dan mematuhi aturan privasi universitas tanpa mengekspos data pribadi sensitif."
-* **Pengaruh pada Arsitektur:** Kebutuhan ini mendikte penerapan kontrol akses berbasis peran (*Role-Based Access Control* - RBAC) yang ketat pada tingkat API, serta pencatatan audit *log* otomatis untuk setiap perubahan atau koreksi presensi yang dilakukan oleh dosen maupun admin akademik.
-
+### 3. ASR 3: Ketahanan terhadap Jaringan Tidak Stabil (Resilience / Low-Connectivity Support)
+* **Persyaratan:** Jika koneksi internet di dalam gedung perkuliahan mengalami gangguan atau tidak stabil, data absensi mahasiswa yang dikirimkan dari perangkat bergerak harus dapat disimpan sementara di penyimpanan lokal (*local storage/SQLite*) pada perangkat klien, lalu disinkronkan secara otomatis begitu jaringan pulih.
+* **Alasan Memengaruhi Arsitektur:** Kebutuhan ini mendikte perancangan arsitektur berbasis *client-side caching* serta *idempotent API endpoints* pada sisi server untuk memastikan tidak terjadinya duplikasi data saat proses sinkronisasi ulang dilakukan.
