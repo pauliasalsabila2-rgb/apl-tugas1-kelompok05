@@ -1,6 +1,6 @@
 # Ringkasan Wawancara [1]
 
-- **Tanggal:** 15-10-2026
+- **Tanggal:** 26-10-2026
 - **Responden (peran saja):** Mahasiswa Aktif Semester 5 (R1)
 - **Pewawancara:** Annajhma Rasyid Sulaiman
 - **Layanan yang dibahas:** Layanan presensi kuliah (absen mahasiswa)[cite: 2]
