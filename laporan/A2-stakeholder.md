@@ -19,3 +19,4 @@ Berikut adalah daftar minimal 6 stakeholder yang terlibat dalam sistem layanan p
 * **Keep Satisfied (Pengaruh Tinggi, Kepentingan Rendah):** Auditor Mutu Kampus. Mereka memiliki kewenangan mengevaluasi tetapi tidak berdampak langsung pada operasional harian, sehingga cukup dipastikan sistem memenuhi standar kepatuhan.
 * **Keep Informed (Pengaruh Rendah, Kepentingan Tinggi):** Mahasiswa dan Dosen Pengampu. Mereka adalah pengguna utama yang paling merasakan dampak sistem, sehingga perlu rutin diberi informasi pembaruan dan dimintai umpan balik.
 * **Monitor (Pengaruh Rendah, Kepentingan Rendah):** Pihak eksternal atau utilitas pendukung lain yang hanya memerlukan pemantauan berkala.
+  [diagram modul](../diagram/A2-peta-power-interest.png)
