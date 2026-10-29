@@ -19,4 +19,5 @@ Berdasarkan hasil wawancara dengan 5 responden (3 Mahasiswa dari berbagai angkat
 ## 2. Peta Power/Interest (Mendelow) dan Strategi
 
 Posisi tiap stakeholder pada Peta *Power/Interest* digambarkan pada diagram `diagram/A2-peta-power-interest.png`. Berikut adalah pembagian kuadran dan strategi pengelolaannya:
-![Diagram modul](../diagram/A2-peta-power-interest.drawio.pgn)
+
+![Diagram modul](../diagram/A2-peta-power-interest.drawio.png)
