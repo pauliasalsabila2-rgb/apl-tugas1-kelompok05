@@ -1,0 +1,109 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Halaman-1" id="CQ28JBmM5A5961OnGYEL">
+    <mxGraphModel dx="774" dy="451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" plantUmlData="{&#xa;  &quot;data&quot;: &quot;@startuml A2-Peta-Power-Interest\nskinparam defaultFontName Arial\nskinparam defaultFontSize 12\nskinparam rectangle {\n    RoundCorner 10\n}\n\ntitle PETA POWER / INTEREST STAKEHOLDER (MENDELOW)\ncaption Layanan Presensi Kuliah (Attendance Management - Kelompok I-5)\n\n&#39; Kuadran Atas (High Power)\nrectangle \&quot;&lt;b&gt;KEEP SATISFIED&lt;/b&gt;\\n(Puaskan &amp; Pelihara)\\n&lt;i&gt;High Power / Low Interest&lt;/i&gt;\\n\\n• Auditor Mutu Internal UMI\\n• Tim Operasional Server\&quot; as KeepSatisfied #FFF3CD {\n}\n\nrectangle \&quot;&lt;b&gt;MANAGE CLOSELY&lt;/b&gt;\\n(Kelola dengan Erat)\\n&lt;i&gt;High Power / High Interest&lt;/i&gt;\\n\\n• Staf Biro Akademik\\n• Dosen Pengampu\&quot; as ManageClosely #F8D7DA {\n}\n\n&#39; Kuadran Bawah (Low Power)\nrectangle \&quot;&lt;b&gt;MONITOR&lt;/b&gt;\\n(Pantau / Minimum Effort)\\n&lt;i&gt;Low Power / Low Interest&lt;/i&gt;\\n\\n• Tim Pengembang (PDTI UMI)\&quot; as Monitor #E2E3E5 {\n}\n\nrectangle \&quot;&lt;b&gt;KEEP INFORMED&lt;/b&gt;\\n(Beri Informasi / Komunikasi)\\n&lt;i&gt;Low Power / High Interest&lt;/i&gt;\\n\\n• Mahasiswa (Maba, Sem 3, Sem 5)\&quot; as KeepInformed #D1ECF1 {\n}\n\n&#39; Pengaturan Tata Letak (Grid 2x2)\nKeepSatisfied -right-&gt; ManageClosely :  Pengaruh Tinggi (Power ▲)\nKeepSatisfied -down-&gt; Monitor : Kepentingan Rendah\nManageClosely -down-&gt; KeepInformed : Kepentingan Tinggi\nMonitor -right-&gt; KeepInformed :  Pengaruh Rendah (Power ▼)\n\nnote left of KeepSatisfied\n  &lt;b&gt;Strategi Audit &amp; Stabilitas:&lt;/b&gt;\n  Sediakan log transparan dan \n  jaga ketersediaan server tanpa \n  membebani urusan teknis harian.\nend note\n\nnote right of ManageClosely\n  &lt;b&gt;Strategi Kolaborasi Erat:&lt;/b&gt;\n  Libatkan langsung pada aturan \n  bisnis presensi, alur approval, \n  dan format rekapitulasi data.\nend note\n\nnote left of Monitor\n  &lt;b&gt;Strategi Pemantauan:&lt;/b&gt;\n  Pantau metrik kualitatif kode, \n  review pull request, dan status \n  performa sistem berkala.\nend note\n\nnote right of KeepInformed\n  &lt;b&gt;Strategi Komunikasi Rutin:&lt;/b&gt;\n  Berikan panduan UI/UX maba, \n  notifikasi status presensi real-time, \n  dan kemudahan klaim kendala jaringan.\nend note\n\n@enduml&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="G-CvwgH6b0asnhwdJnc8-1">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=10;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;KEEP SATISFIED&lt;/b&gt;&lt;br&gt;(Puaskan &amp;amp; Pelihara)&lt;br&gt;&lt;i&gt;High Power / Low Interest&lt;/i&gt;&lt;br&gt;&lt;br&gt;• Auditor Mutu Internal UMI&lt;br&gt;• Tim Operasional Server" plantUmlId="n_0" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=10;strokeWidth=1;fillColor=#FFF3CD;strokeColor=#181818;whiteSpace=wrap;fontSize=12;fontFamily=Arial;html=1;" plantUmlBaseValue="&lt;b&gt;KEEP SATISFIED&lt;/b&gt;&lt;br&gt;(Puaskan &amp;amp; Pelihara)&lt;br&gt;&lt;i&gt;High Power / Low Interest&lt;/i&gt;&lt;br&gt;&lt;br&gt;• Auditor Mutu Internal UMI&lt;br&gt;• Tim Operasional Server" id="G-CvwgH6b0asnhwdJnc8-2">
+          <mxCell parent="G-CvwgH6b0asnhwdJnc8-1" style="rounded=1;absoluteArcSize=1;arcSize=10;strokeWidth=1;fillColor=#FFF3CD;strokeColor=#181818;whiteSpace=wrap;fontSize=12;fontFamily=Arial;html=1;" vertex="1">
+            <mxGeometry height="110" width="219" x="305.28" y="66" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;MANAGE CLOSELY&lt;/b&gt;&lt;br&gt;(Kelola dengan Erat)&lt;br&gt;&lt;i&gt;High Power / High Interest&lt;/i&gt;&lt;br&gt;&lt;br&gt;• Staf Biro Akademik&lt;br&gt;• Dosen Pengampu" plantUmlId="n_1" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=10;strokeWidth=1;fillColor=#F8D7DA;strokeColor=#181818;whiteSpace=wrap;fontSize=12;fontFamily=Arial;html=1;" plantUmlBaseValue="&lt;b&gt;MANAGE CLOSELY&lt;/b&gt;&lt;br&gt;(Kelola dengan Erat)&lt;br&gt;&lt;i&gt;High Power / High Interest&lt;/i&gt;&lt;br&gt;&lt;br&gt;• Staf Biro Akademik&lt;br&gt;• Dosen Pengampu" id="G-CvwgH6b0asnhwdJnc8-3">
+          <mxCell parent="G-CvwgH6b0asnhwdJnc8-1" style="rounded=1;absoluteArcSize=1;arcSize=10;strokeWidth=1;fillColor=#F8D7DA;strokeColor=#181818;whiteSpace=wrap;fontSize=12;fontFamily=Arial;html=1;" vertex="1">
+            <mxGeometry height="110" width="214" x="737.28" y="66" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;MONITOR&lt;/b&gt;&lt;br&gt;(Pantau / Minimum Effort)&lt;br&gt;&lt;i&gt;Low Power / Low Interest&lt;/i&gt;&lt;br&gt;&lt;br&gt;• Tim Pengembang (PDTI UMI)" plantUmlId="n_2" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=10;strokeWidth=1;fillColor=#E2E3E5;strokeColor=#181818;whiteSpace=wrap;fontSize=12;fontFamily=Arial;html=1;" plantUmlBaseValue="&lt;b&gt;MONITOR&lt;/b&gt;&lt;br&gt;(Pantau / Minimum Effort)&lt;br&gt;&lt;i&gt;Low Power / Low Interest&lt;/i&gt;&lt;br&gt;&lt;br&gt;• Tim Pengembang (PDTI UMI)" id="G-CvwgH6b0asnhwdJnc8-4">
+          <mxCell parent="G-CvwgH6b0asnhwdJnc8-1" style="rounded=1;absoluteArcSize=1;arcSize=10;strokeWidth=1;fillColor=#E2E3E5;strokeColor=#181818;whiteSpace=wrap;fontSize=12;fontFamily=Arial;html=1;" vertex="1">
+            <mxGeometry height="94" width="230" x="278" y="252" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;KEEP INFORMED&lt;/b&gt;&lt;br&gt;(Beri Informasi / Komunikasi)&lt;br&gt;&lt;i&gt;Low Power / High Interest&lt;/i&gt;&lt;br&gt;&lt;br&gt;• Mahasiswa (Maba, Sem 3, Sem 5)" plantUmlId="n_3" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=10;strokeWidth=1;fillColor=#D1ECF1;strokeColor=#181818;whiteSpace=wrap;fontSize=12;fontFamily=Arial;html=1;" plantUmlBaseValue="&lt;b&gt;KEEP INFORMED&lt;/b&gt;&lt;br&gt;(Beri Informasi / Komunikasi)&lt;br&gt;&lt;i&gt;Low Power / High Interest&lt;/i&gt;&lt;br&gt;&lt;br&gt;• Mahasiswa (Maba, Sem 3, Sem 5)" id="G-CvwgH6b0asnhwdJnc8-5">
+          <mxCell parent="G-CvwgH6b0asnhwdJnc8-1" style="rounded=1;absoluteArcSize=1;arcSize=10;strokeWidth=1;fillColor=#D1ECF1;strokeColor=#181818;whiteSpace=wrap;fontSize=12;fontFamily=Arial;html=1;" vertex="1">
+            <mxGeometry height="94" width="269" x="728" y="252" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Pengaruh Tinggi (Power ▲)" plantUmlId="e_4" plantUmlBaseStyle="strokeColor=#181818;fontColor=#000000;fontSize=12;html=1;labelBackgroundColor=#FFFFFF;verticalAlign=bottom;endArrow=classicThin;endFill=1;fontFamily=Arial;curved=0;rounded=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="Pengaruh Tinggi (Power ▲)" id="G-CvwgH6b0asnhwdJnc8-6">
+          <mxCell edge="1" parent="G-CvwgH6b0asnhwdJnc8-1" source="G-CvwgH6b0asnhwdJnc8-2" style="strokeColor=#181818;fontColor=#000000;fontSize=12;html=1;labelBackgroundColor=#FFFFFF;verticalAlign=bottom;endArrow=classicThin;endFill=1;fontFamily=Arial;curved=0;rounded=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="G-CvwgH6b0asnhwdJnc8-3">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Kepentingan Rendah" plantUmlId="e_5" plantUmlBaseStyle="strokeColor=#181818;fontColor=#000000;fontSize=12;html=1;labelBackgroundColor=#FFFFFF;labelPosition=right;align=left;endArrow=classicThin;endFill=1;fontFamily=Arial;curved=0;rounded=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="Kepentingan Rendah" id="G-CvwgH6b0asnhwdJnc8-7">
+          <mxCell edge="1" parent="G-CvwgH6b0asnhwdJnc8-1" source="G-CvwgH6b0asnhwdJnc8-2" style="strokeColor=#181818;fontColor=#000000;fontSize=12;html=1;labelBackgroundColor=#FFFFFF;labelPosition=right;align=left;endArrow=classicThin;endFill=1;fontFamily=Arial;curved=0;rounded=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="G-CvwgH6b0asnhwdJnc8-4">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="70" as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Kepentingan Tinggi" plantUmlId="e_6" plantUmlBaseStyle="strokeColor=#181818;fontColor=#000000;fontSize=12;html=1;labelBackgroundColor=#FFFFFF;labelPosition=right;align=left;endArrow=classicThin;endFill=1;fontFamily=Arial;curved=0;rounded=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="Kepentingan Tinggi" id="G-CvwgH6b0asnhwdJnc8-8">
+          <mxCell edge="1" parent="G-CvwgH6b0asnhwdJnc8-1" source="G-CvwgH6b0asnhwdJnc8-3" style="strokeColor=#181818;fontColor=#000000;fontSize=12;html=1;labelBackgroundColor=#FFFFFF;labelPosition=right;align=left;endArrow=classicThin;endFill=1;fontFamily=Arial;curved=0;rounded=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="G-CvwgH6b0asnhwdJnc8-5">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="66" as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Pengaruh Rendah (Power ▼)" plantUmlId="e_7" plantUmlBaseStyle="strokeColor=#181818;fontColor=#000000;fontSize=12;html=1;labelBackgroundColor=#FFFFFF;verticalAlign=bottom;endArrow=classicThin;endFill=1;fontFamily=Arial;curved=0;rounded=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="Pengaruh Rendah (Power ▼)" id="G-CvwgH6b0asnhwdJnc8-9">
+          <mxCell edge="1" parent="G-CvwgH6b0asnhwdJnc8-1" source="G-CvwgH6b0asnhwdJnc8-4" style="strokeColor=#181818;fontColor=#000000;fontSize=12;html=1;labelBackgroundColor=#FFFFFF;verticalAlign=bottom;endArrow=classicThin;endFill=1;fontFamily=Arial;curved=0;rounded=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="G-CvwgH6b0asnhwdJnc8-5">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;Strategi Audit &amp;amp; Stabilitas:&lt;/b&gt;&lt;br&gt;Sediakan log transparan dan&lt;br&gt;jaga ketersediaan server tanpa&lt;br&gt;membebani urusan teknis harian." plantUmlId="note_8" plantUmlBaseStyle="shape=note;size=10;fillColor=#FEFFDD;strokeColor=#181818;fontSize=12;whiteSpace=wrap;align=left;spacingLeft=4;fontFamily=Arial;html=1;" plantUmlBaseValue="&lt;b&gt;Strategi Audit &amp;amp; Stabilitas:&lt;/b&gt;&lt;br&gt;Sediakan log transparan dan&lt;br&gt;jaga ketersediaan server tanpa&lt;br&gt;membebani urusan teknis harian." id="G-CvwgH6b0asnhwdJnc8-10">
+          <mxCell parent="G-CvwgH6b0asnhwdJnc8-1" style="shape=note;size=10;fillColor=#FEFFDD;strokeColor=#181818;fontSize=12;whiteSpace=wrap;align=left;spacingLeft=4;fontFamily=Arial;html=1;" vertex="1">
+            <mxGeometry height="71" width="229" x="41.78" y="86" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="noteptr_9" plantUmlBaseStyle="shape=triangle;fillColor=#FEFFDD;strokeColor=#181818;strokeWidth=0.5;fontSize=12;fontFamily=Arial;direction=east;part=1;" plantUmlBaseValue="" id="G-CvwgH6b0asnhwdJnc8-11">
+          <mxCell parent="G-CvwgH6b0asnhwdJnc8-10" style="shape=triangle;fillColor=#FEFFDD;strokeColor=#181818;strokeWidth=0.5;fontSize=12;fontFamily=Arial;direction=east;part=1;" vertex="1">
+            <mxGeometry height="8" width="35.5" x="228" y="31" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;Strategi Kolaborasi Erat:&lt;/b&gt;&lt;br&gt;Libatkan langsung pada aturan&lt;br&gt;bisnis presensi, alur approval,&lt;br&gt;dan format rekapitulasi data." plantUmlId="note_10" plantUmlBaseStyle="shape=note;size=10;fillColor=#FEFFDD;strokeColor=#181818;fontSize=12;whiteSpace=wrap;align=left;spacingLeft=4;fontFamily=Arial;html=1;" plantUmlBaseValue="&lt;b&gt;Strategi Kolaborasi Erat:&lt;/b&gt;&lt;br&gt;Libatkan langsung pada aturan&lt;br&gt;bisnis presensi, alur approval,&lt;br&gt;dan format rekapitulasi data." id="G-CvwgH6b0asnhwdJnc8-12">
+          <mxCell parent="G-CvwgH6b0asnhwdJnc8-1" style="shape=note;size=10;fillColor=#FEFFDD;strokeColor=#181818;fontSize=12;whiteSpace=wrap;align=left;spacingLeft=4;fontFamily=Arial;html=1;" vertex="1">
+            <mxGeometry height="71" width="223" x="986.78" y="86" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="noteptr_11" plantUmlBaseStyle="shape=triangle;fillColor=#FEFFDD;strokeColor=#181818;strokeWidth=0.5;fontSize=12;fontFamily=Arial;direction=west;part=1;" plantUmlBaseValue="" id="G-CvwgH6b0asnhwdJnc8-13">
+          <mxCell parent="G-CvwgH6b0asnhwdJnc8-12" style="shape=triangle;fillColor=#FEFFDD;strokeColor=#181818;strokeWidth=0.5;fontSize=12;fontFamily=Arial;direction=west;part=1;" vertex="1">
+            <mxGeometry height="8" width="36.5" x="-35.5" y="31" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;Strategi Pemantauan:&lt;/b&gt;&lt;br&gt;Pantau metrik kualitatif kode,&lt;br&gt;review pull request, dan status&lt;br&gt;performa sistem berkala." plantUmlId="note_12" plantUmlBaseStyle="shape=note;size=10;fillColor=#FEFFDD;strokeColor=#181818;fontSize=12;whiteSpace=wrap;align=left;spacingLeft=4;fontFamily=Arial;html=1;" plantUmlBaseValue="&lt;b&gt;Strategi Pemantauan:&lt;/b&gt;&lt;br&gt;Pantau metrik kualitatif kode,&lt;br&gt;review pull request, dan status&lt;br&gt;performa sistem berkala." id="G-CvwgH6b0asnhwdJnc8-14">
+          <mxCell parent="G-CvwgH6b0asnhwdJnc8-1" style="shape=note;size=10;fillColor=#FEFFDD;strokeColor=#181818;fontSize=12;whiteSpace=wrap;align=left;spacingLeft=4;fontFamily=Arial;html=1;" vertex="1">
+            <mxGeometry height="71" width="213" x="30" y="264" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="noteptr_13" plantUmlBaseStyle="shape=triangle;fillColor=#FEFFDD;strokeColor=#181818;strokeWidth=0.5;fontSize=12;fontFamily=Arial;direction=east;part=1;" plantUmlBaseValue="" id="G-CvwgH6b0asnhwdJnc8-15">
+          <mxCell parent="G-CvwgH6b0asnhwdJnc8-14" style="shape=triangle;fillColor=#FEFFDD;strokeColor=#181818;strokeWidth=0.5;fontSize=12;fontFamily=Arial;direction=east;part=1;" vertex="1">
+            <mxGeometry height="8" width="36" x="212" y="31" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;Strategi Komunikasi Rutin:&lt;/b&gt;&lt;br&gt;Berikan panduan UI/UX maba,&lt;br&gt;notifikasi status presensi real-time,&lt;br&gt;dan kemudahan klaim kendala jaringan." plantUmlId="note_14" plantUmlBaseStyle="shape=note;size=10;fillColor=#FEFFDD;strokeColor=#181818;fontSize=12;whiteSpace=wrap;align=left;spacingLeft=4;fontFamily=Arial;html=1;" plantUmlBaseValue="&lt;b&gt;Strategi Komunikasi Rutin:&lt;/b&gt;&lt;br&gt;Berikan panduan UI/UX maba,&lt;br&gt;notifikasi status presensi real-time,&lt;br&gt;dan kemudahan klaim kendala jaringan." id="G-CvwgH6b0asnhwdJnc8-16">
+          <mxCell parent="G-CvwgH6b0asnhwdJnc8-1" style="shape=note;size=10;fillColor=#FEFFDD;strokeColor=#181818;fontSize=12;whiteSpace=wrap;align=left;spacingLeft=4;fontFamily=Arial;html=1;" vertex="1">
+            <mxGeometry height="71" width="264" x="1032" y="264" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="noteptr_15" plantUmlBaseStyle="shape=triangle;fillColor=#FEFFDD;strokeColor=#181818;strokeWidth=0.5;fontSize=12;fontFamily=Arial;direction=west;part=1;" plantUmlBaseValue="" id="G-CvwgH6b0asnhwdJnc8-17">
+          <mxCell parent="G-CvwgH6b0asnhwdJnc8-16" style="shape=triangle;fillColor=#FEFFDD;strokeColor=#181818;strokeWidth=0.5;fontSize=12;fontFamily=Arial;direction=west;part=1;" vertex="1">
+            <mxGeometry height="8" width="36" x="-35" y="31" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="PETA POWER / INTEREST STAKEHOLDER (MENDELOW)" plantUmlId="title_16" plantUmlBaseStyle="text;html=1;fillColor=none;strokeColor=none;fontSize=14;fontStyle=1;fontColor=#000000;align=center;verticalAlign=middle;fontFamily=Arial;" plantUmlBaseValue="PETA POWER / INTEREST STAKEHOLDER (MENDELOW)" id="G-CvwgH6b0asnhwdJnc8-18">
+          <mxCell parent="G-CvwgH6b0asnhwdJnc8-1" style="text;html=1;fillColor=none;strokeColor=none;fontSize=14;fontStyle=1;fontColor=#000000;align=center;verticalAlign=middle;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="24" width="362" x="461.5" y="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Layanan Presensi Kuliah (Attendance Management - Kelompok I-5)" plantUmlId="caption_0" plantUmlBaseStyle="text;html=1;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;" plantUmlBaseValue="Layanan Presensi Kuliah (Attendance Management - Kelompok I-5)" id="G-CvwgH6b0asnhwdJnc8-19">
+          <mxCell parent="G-CvwgH6b0asnhwdJnc8-1" style="text;html=1;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="18" width="466" x="430" y="350" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
