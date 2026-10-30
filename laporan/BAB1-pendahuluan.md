@@ -25,5 +25,4 @@ Penyusunan analisis dan perancangan arsitektur perangkat lunak untuk Layanan Pre
 1. **Pengalaman Pengguna (User Experience):** Pengalaman anggota kelompok sebagai mahasiswa dalam menggunakan layanan presensi pada platform KALAM, terutama terkait proses presensi, kemudahan akses, dan kendala yang dialami [5].
 2. **Informasi Publik:** Informasi mengenai layanan akademik, panduan perkuliahan, serta ketentuan presensi yang berkaitan dengan Universitas Muslim Indonesia.
 3. **Wawancara:** Pengumpulan informasi melalui wawancara terhadap lima responden, terdiri atas tiga mahasiswa, satu staf Administrasi Biro Akademik, dan satu dosen. Wawancara dilakukan untuk mengetahui kebutuhan, kendala, dan harapan pengguna terhadap layanan presensi kuliah [5].
-
 4. **Pengamatan Langsung:** Pengamatan terhadap penggunaan layanan presensi, khususnya kendala akses saat banyak pengguna mengakses sistem secara bersamaan serta kondisi jaringan saat proses presensi berlangsung [5].
