@@ -13,5 +13,4 @@ Pengembangan Layanan Presensi Kuliah diharapkan dapat memperhatikan beberapa hal
 1. Meningkatkan performa sistem agar tetap stabil meskipun diakses oleh banyak pengguna secara bersamaan.
 2. Menjaga keamanan dan keakuratan data presensi agar tidak terjadi kehilangan atau duplikasi data.
 3. Menyediakan fitur koreksi presensi untuk mengatasi kesalahan atau kendala saat proses presensi.
-4. Mengembangkan tampilan sistem yang sederhana dan mudah digunakan oleh mahasiswa, dosen, serta staf akademik.
-5. Melakukan evaluasi dan pemeliharaan sistem secara berkala agar kualitas layanan tetap terjaga.
+4. Melakukan evaluasi dan pemeliharaan sistem secara berkala agar kualitas layanan tetap terjaga.
