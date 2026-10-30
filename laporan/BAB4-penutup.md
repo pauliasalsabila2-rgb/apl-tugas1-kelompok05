@@ -1,4 +1,4 @@
-# BAB IV. PENUTUP
+# BAB IV. Penutup
 
 ## 4.1 Kesimpulan
 
