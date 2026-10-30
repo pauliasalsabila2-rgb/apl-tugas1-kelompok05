@@ -37,22 +37,3 @@ Analisis ini dibatasi pada proses pencatatan, pengelolaan, koreksi, dan pelapora
 
 ## 1.3 Sumber Data
 
-Data yang digunakan dalam analisis Layanan Presensi Kuliah diperoleh melalui beberapa sumber untuk memahami kebutuhan pengguna dan kondisi layanan. Sumber data tersebut meliputi:
-
-1. **Wawancara Responden**
-
-   Pengumpulan informasi dilakukan melalui wawancara terhadap lima responden, yang terdiri atas tiga mahasiswa dari berbagai angkatan, satu dosen pengampu, dan satu staf Biro Akademik. Wawancara bertujuan mengetahui kebutuhan, kendala, serta harapan setiap pengguna terhadap layanan presensi kuliah.
-
-2. **Pengalaman Pengguna**
-
-   Pengalaman dalam menggunakan layanan presensi kuliah digunakan untuk memahami alur penggunaan, kemudahan akses, serta kendala yang mungkin terjadi ketika mahasiswa melakukan presensi.
-
-3. **Observasi**
-
-   Observasi dilakukan untuk memahami proses presensi dalam kegiatan perkuliahan, mulai dari pembukaan sesi oleh dosen, pengisian presensi oleh mahasiswa, hingga pengelolaan data kehadiran.
-
-4. **Informasi dan Dokumentasi Pendukung**
-
-   Informasi pendukung yang berkaitan dengan layanan Smart Campus UMI digunakan sebagai bahan untuk memahami fungsi layanan, proses administrasi kehadiran, serta kebutuhan pengembangan sistem.
-
-Data dari berbagai sumber tersebut digunakan sebagai dasar dalam mengidentifikasi kebutuhan pemangku kepentingan, batasan sistem, kebutuhan signifikan secara arsitektural (*Architecturally Significant Requirements*), serta karakteristik kualitas yang perlu diperhatikan dalam perancangan arsitektur Layanan Presensi Kuliah.
