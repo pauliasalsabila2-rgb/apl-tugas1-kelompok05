@@ -1,5 +1,5 @@
 
-# BAB I. PENDAHULUAN
+# BAB I. Pendahuluan
 
 ## 1.1 Gambaran Layanan Inti
 
