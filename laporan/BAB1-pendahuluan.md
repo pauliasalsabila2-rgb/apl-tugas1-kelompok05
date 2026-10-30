@@ -25,11 +25,7 @@ Ruang lingkup analisis Layanan Presensi Kuliah difokuskan pada proses utama yang
 
    Mahasiswa dapat melihat status kehadirannya untuk memastikan bahwa presensi telah tercatat dengan benar.
 
-4. **Pengajuan dan Persetujuan Koreksi Presensi**
-
-   Mahasiswa dapat mengajukan koreksi apabila terjadi kesalahan pencatatan kehadiran. Dosen kemudian melakukan pemeriksaan dan memberikan persetujuan atau penolakan terhadap permohonan tersebut.
-
-5. **Pembuatan Laporan Kehadiran**
+4. **Pembuatan Laporan Kehadiran**
 
    Sistem menyediakan rekapitulasi atau laporan kehadiran mahasiswa yang dapat digunakan oleh dosen dan pihak akademik untuk kebutuhan pemantauan serta administrasi perkuliahan.
 
