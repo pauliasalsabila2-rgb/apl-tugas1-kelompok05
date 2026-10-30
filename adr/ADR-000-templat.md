@@ -4,7 +4,7 @@
 
 - **Status:** Diusulkan / Diterima / Digantikan oleh ADR-[001]
 - **Tanggal:** [30-10-2026]
-- **Pengambil keputusan:** [nama anggota]
+- **Pengambil keputusan:** [Deananda Hi.Muh Arfah]
 
 ## Context
 Layanan presensi mahasiswa pada portal KALAM sering mengalami perlambatan ketika diakses oleh banyak mahasiswa secara bersamaan, terutama pada menit-menit awal perkuliahan. Berdasarkan hasil wawancara dengan mahasiswa semester 5 dan mahasiswa baru, kondisi tersebut menyebabkan proses pemuatan halaman menjadi lambat (loading dan lagging).
@@ -26,22 +26,15 @@ Pemilihan teknologi dan penerapan optimasi teknis akan disesuaikan dengan kebutu
 
 ## Consequences
 Dampak Positif:
-
-Mengurangi risiko keterlambatan pemuatan halaman ketika jam presensi dimulai.
-
-Meningkatkan kenyamanan mahasiswa dalam mengakses layanan presensi.
-
-Meningkatkan kestabilan sistem ketika menerima banyak permintaan secara bersamaan.
-
-Membantu memenuhi target kualitas kinerja yang telah ditentukan.
+- Mengurangi risiko keterlambatan pemuatan halaman ketika jam presensi dimulai.
+- Meningkatkan kenyamanan mahasiswa dalam mengakses layanan presensi.
+- Meningkatkan kestabilan sistem ketika menerima banyak permintaan secara bersamaan.
+- Membantu memenuhi target kualitas kinerja yang telah ditentukan.
 
 Dampak Negatif:
-
-Membutuhkan perencanaan arsitektur dan pengujian kinerja yang lebih matang.
-
-Memerlukan sumber daya infrastruktur yang memadai untuk menangani peningkatan jumlah pengguna.
-
-Proses optimasi sistem dapat menambah kompleksitas pengembangan dan pemeliharaan.
+- Membutuhkan perencanaan arsitektur dan pengujian kinerja yang lebih matang.
+- Memerlukan sumber daya infrastruktur yang memadai untuk menangani peningkatan jumlah pengguna.
+- Proses optimasi sistem dapat menambah kompleksitas pengembangan dan pemeliharaan.
 
 Trade-off:
 
@@ -49,13 +42,8 @@ Kami menerima kemungkinan bertambahnya kebutuhan sumber daya infrastruktur dan k
 
 ## Compliance
 Keputusan ini akan dipastikan melalui beberapa langkah berikut:
-
-Melakukan pengujian beban (load testing) untuk mengetahui kemampuan sistem dalam menangani 3.000 pengguna secara bersamaan.
-
-Mengukur waktu pemuatan halaman untuk memastikan minimal 95% halaman dapat dimuat kurang dari 3 detik.
-
-Melakukan pemantauan kinerja sistem pada saat terjadi peningkatan aktivitas presensi.
-
-Melakukan evaluasi dan optimasi apabila hasil pengujian belum memenuhi target yang telah ditentukan.
-
-Mendokumentasikan hasil pengujian sebagai bukti bahwa persyaratan kinerja sistem telah terpenuhi.
+1. Melakukan pengujian beban (load testing) untuk mengetahui kemampuan sistem dalam menangani 3.000 pengguna secara bersamaan.
+2. Mengukur waktu pemuatan halaman untuk memastikan minimal 95% halaman dapat dimuat kurang dari 3 detik.
+3. Melakukan pemantauan kinerja sistem pada saat terjadi peningkatan aktivitas presensi.
+4. Melakukan evaluasi dan optimasi apabila hasil pengujian belum memenuhi target yang telah ditentukan.
+5. Mendokumentasikan hasil pengujian sebagai bukti bahwa persyaratan kinerja sistem telah terpenuhi.
