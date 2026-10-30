@@ -1,7 +1,7 @@
 
 # BAB I. Pendahuluan
 
-## 1.1 Gambaran Layanan Inti
+## 1.1 Gambaran layanan inti
 
 Layanan Presensi Kuliah merupakan salah satu bagian dari subsistem *Attendance Management* dalam Smart Campus UMI yang berfungsi untuk membantu proses pencatatan dan pengelolaan kehadiran mahasiswa selama kegiatan perkuliahan berlangsung. Layanan ini dirancang untuk memudahkan mahasiswa dalam melakukan presensi, dosen dalam mengelola sesi kehadiran, serta pihak akademik dalam memantau dan memperoleh rekapitulasi kehadiran mahasiswa.
 
