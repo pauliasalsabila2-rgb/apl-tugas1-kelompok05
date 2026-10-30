@@ -9,7 +9,7 @@ Dalam pelaksanaannya, layanan presensi kuliah melibatkan beberapa proses utama, 
 
 Layanan ini memiliki peran penting dalam mendukung administrasi akademik karena data kehadiran dapat digunakan untuk memantau tingkat partisipasi mahasiswa dalam perkuliahan. Oleh karena itu, sistem presensi perlu memperhatikan keakuratan data, keamanan informasi, kemudahan penggunaan, serta kemampuan menangani akses pengguna secara bersamaan.
 
-## 1.2 Ruang Lingkup
+## 1.2 Ruang lingkup
 
 Ruang lingkup analisis Layanan Presensi Kuliah difokuskan pada proses utama yang berkaitan dengan pencatatan dan pengelolaan kehadiran mahasiswa. Terdapat empat kasus penggunaan (*use case*) yang menjadi fokus pembahasan, yaitu:
 
@@ -31,7 +31,7 @@ Ruang lingkup analisis Layanan Presensi Kuliah difokuskan pada proses utama yang
 
 Analisis ini dibatasi pada proses pencatatan, pengelolaan, koreksi, dan pelaporan kehadiran mahasiswa. Pembahasan tidak mencakup layanan akademik lain seperti pengisian KRS, pengelolaan nilai, maupun pembayaran administrasi perkuliahan.
 
-## 1.3 Sumber Data
+## 1.3 Sumber data
 
 Penyusunan analisis dan perancangan arsitektur perangkat lunak untuk Layanan Presensi Kuliah didasarkan pada beberapa sumber data, yaitu:
 
