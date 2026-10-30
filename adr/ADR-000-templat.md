@@ -2,18 +2,60 @@
 
 <!-- Salin berkas ini menjadi ADR-001-judul-singkat.md, ADR-002-... dan seterusnya. -->
 
-- **Status:** Diusulkan / Diterima / Digantikan oleh ADR-[nomor]
-- **Tanggal:** [DD-MM-2026]
+- **Status:** Diusulkan / Diterima / Digantikan oleh ADR-[001]
+- **Tanggal:** [30-10-2026]
 - **Pengambil keputusan:** [nama anggota]
 
 ## Context
-[Masalah, kekuatan yang memengaruhi, dan batasan. Hubungkan dengan kode ASR pada A4.]
+Layanan presensi mahasiswa pada portal KALAM sering mengalami perlambatan ketika diakses oleh banyak mahasiswa secara bersamaan, terutama pada menit-menit awal perkuliahan. Berdasarkan hasil wawancara dengan mahasiswa semester 5 dan mahasiswa baru, kondisi tersebut menyebabkan proses pemuatan halaman menjadi lambat (loading dan lagging).
+
+Selain itu, sistem perlu mampu melayani sekitar 3.000 pengguna secara bersamaan dengan tetap mempertahankan waktu pemuatan halaman yang cepat. Hal ini menjadi kebutuhan penting karena proses presensi dilakukan pada waktu yang relatif bersamaan oleh mahasiswa dari berbagai kelas.
+
+Permasalahan tersebut berkaitan dengan kode ASR A4, yaitu kebutuhan menangani lonjakan akses (concurrent access) dan B2, yaitu persyaratan kualitas kinerja sistem dengan target 95% halaman dapat dimuat kurang dari 3 detik pada kondisi 3.000 pengguna bersamaan.
+
+Oleh karena itu, diperlukan keputusan arsitektur yang memprioritaskan kinerja sistem dan kemampuan menangani beban akses tinggi tanpa mengabaikan kebutuhan layanan presensi lainnya.
 
 ## Decision
-[Keputusan yang diambil, ditulis dengan kalimat aktif: "Kami akan ...".]
+Kami akan memprioritaskan perancangan arsitektur sistem presensi yang mampu menangani lonjakan akses pengguna secara bersamaan (high concurrent access).
+
+Sistem harus dirancang dengan memperhatikan efisiensi pemrosesan permintaan, kestabilan layanan, serta kemampuan mempertahankan waktu respons ketika terjadi peningkatan jumlah pengguna.
+
+Target kinerja yang digunakan adalah 95% halaman dapat dimuat dalam waktu kurang dari 3 detik ketika diakses oleh 3.000 pengguna secara bersamaan.
+
+Pemilihan teknologi dan penerapan optimasi teknis akan disesuaikan dengan kebutuhan sistem serta kemampuan infrastruktur yang tersedia.
 
 ## Consequences
-[Dampak positif dan negatif, termasuk trade-off yang diterima.]
+Dampak Positif:
+
+Mengurangi risiko keterlambatan pemuatan halaman ketika jam presensi dimulai.
+
+Meningkatkan kenyamanan mahasiswa dalam mengakses layanan presensi.
+
+Meningkatkan kestabilan sistem ketika menerima banyak permintaan secara bersamaan.
+
+Membantu memenuhi target kualitas kinerja yang telah ditentukan.
+
+Dampak Negatif:
+
+Membutuhkan perencanaan arsitektur dan pengujian kinerja yang lebih matang.
+
+Memerlukan sumber daya infrastruktur yang memadai untuk menangani peningkatan jumlah pengguna.
+
+Proses optimasi sistem dapat menambah kompleksitas pengembangan dan pemeliharaan.
+
+Trade-off:
+
+Kami menerima kemungkinan bertambahnya kebutuhan sumber daya infrastruktur dan kompleksitas pengembangan demi memperoleh kinerja sistem yang lebih stabil pada kondisi akses tinggi.
 
 ## Compliance
-[Cara memastikan keputusan ini dipatuhi: tinjauan kode, pengujian, atau pemantauan.]
+Keputusan ini akan dipastikan melalui beberapa langkah berikut:
+
+Melakukan pengujian beban (load testing) untuk mengetahui kemampuan sistem dalam menangani 3.000 pengguna secara bersamaan.
+
+Mengukur waktu pemuatan halaman untuk memastikan minimal 95% halaman dapat dimuat kurang dari 3 detik.
+
+Melakukan pemantauan kinerja sistem pada saat terjadi peningkatan aktivitas presensi.
+
+Melakukan evaluasi dan optimasi apabila hasil pengujian belum memenuhi target yang telah ditentukan.
+
+Mendokumentasikan hasil pengujian sebagai bukti bahwa persyaratan kinerja sistem telah terpenuhi.
