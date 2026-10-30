@@ -11,7 +11,7 @@ Layanan ini memiliki peran penting dalam mendukung administrasi akademik karena 
 
 ## 1.2 Ruang Lingkup
 
-Ruang lingkup analisis Layanan Presensi Kuliah difokuskan pada proses utama yang berkaitan dengan pencatatan dan pengelolaan kehadiran mahasiswa. Terdapat lima kasus penggunaan (*use case*) yang menjadi fokus pembahasan, yaitu:
+Ruang lingkup analisis Layanan Presensi Kuliah difokuskan pada proses utama yang berkaitan dengan pencatatan dan pengelolaan kehadiran mahasiswa. Terdapat empat kasus penggunaan (*use case*) yang menjadi fokus pembahasan, yaitu:
 
 1. **Pembukaan Sesi Presensi oleh Dosen**
 
