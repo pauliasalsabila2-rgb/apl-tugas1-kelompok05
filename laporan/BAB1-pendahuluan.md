@@ -29,8 +29,6 @@ Ruang lingkup analisis Layanan Presensi Kuliah difokuskan pada proses utama yang
 
    Sistem menyediakan rekapitulasi atau laporan kehadiran mahasiswa yang dapat digunakan oleh dosen dan pihak akademik untuk kebutuhan pemantauan serta administrasi perkuliahan.
 
-Analisis ini dibatasi pada proses pencatatan, pengelolaan, koreksi, dan pelaporan kehadiran mahasiswa. Pembahasan tidak mencakup layanan akademik lain seperti pengisian KRS, pengelolaan nilai, maupun pembayaran administrasi perkuliahan.
-
 ## 1.3 Sumber data
 
 Penyusunan analisis dan perancangan arsitektur perangkat lunak untuk Layanan Presensi Kuliah didasarkan pada beberapa sumber data, yaitu:
