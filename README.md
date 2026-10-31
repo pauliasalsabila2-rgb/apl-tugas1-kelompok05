@@ -12,8 +12,8 @@ Konteks & Keputusan Arsitektur (Pertemuan 5) serta Karakteristik Arsitektur & At
 
 | No | Stambuk | Nama | Akun GitHub | Kode yang dikerjakan |
 |---|---|---|---|---|
-| 1 |13020240032|Putri Aulia Salsabila| @pauliasalsabila2-rgb | |
-| 2 |13020240058|Annajhma Rasyid Sulaiman | @annajhmarasyid2005 | |
+| 1 |13020240032|Putri Aulia Salsabila| @pauliasalsabila2-rgb |B2, B3, B4, B5,|
+| 2 |13020240058|Annajhma Rasyid Sulaiman | @annajhmarasyid2005 |A1, A2, A3, A4, A5,B1, B3,|
 | 3 |13020240| Andi Syawalia Zakira Fitri | @syawaliacawwax-ctrl | |
 | 4 |13020240| Deananda Hi.Muh.Arfah | @13020240258-ux | |
 
@@ -23,19 +23,19 @@ Konteks & Keputusan Arsitektur (Pertemuan 5) serta Karakteristik Arsitektur & At
 
 | Kode | Berkas | Penanggung jawab | Status |
 |---|---|---|---|
-| BAB I | laporan/BAB1-pendahuluan.md | Putri Aulia Salsabila | Belum |
-| A1 | laporan/A1-konteks-arsitektur.md | Annajhma Rasyid Sulaiman | Belum |
-| A2 | laporan/A2-stakeholder.md | Andi Syawalia Zakira Fitri | Belum |
-| A3 | laporan/A3-batasan.md | Deananda Hi.Muh.Arfah | Belum |
-| A4 | laporan/A4-asr.md | Putri Aulia Salsabila | Belum |
-| A5 | laporan/A5-keputusan-arsitektur.md dan adr/ | Annajhma Rasyid Sulaiman | Belum |
-| B1 | laporan/B1-karakteristik.md | Andi Syawalia Zakira Fitri | Belum |
-| B2 | laporan/B2-atribut-terukur.md | Deananda Hi.Muh.Arfah | Belum |
-| B3 | laporan/B3-tiga-struktur.md dan diagram/ | Putri Aulia Salsabila | Belum |
-| B4 | laporan/B4-iso-25010.md | Annajhma Rasyid Sulaiman | Belum |
-| B5 | laporan/B5-trade-off.md | Andi Syawalia Zakira Fitri | Belum |
-| BAB IV | laporan/BAB4-penutup.md | Deananda Hi.Muh.Arfah | Belum |
-| Pustaka | laporan/daftar-pustaka.md | Putri Aulia Salsabila | Belum |
+| BAB I | laporan/BAB1-pendahuluan.md | Andi Syawalia Zakira Fitri | Sudah |
+| A1 | laporan/A1-konteks-arsitektur.md | Annajhma Rasyid Sulaiman | Sudah |
+| A2 | laporan/A2-stakeholder.md | Annajhma Rasyid Sulaiman | Sudah |
+| A3 | laporan/A3-batasan.md | Annajhma Rasyid Sulaiman | Sudah |
+| A4 | laporan/A4-asr.md | Annajhma Rasyid Sulaiman | Sudah |
+| A5 | laporan/A5-keputusan-arsitektur.md dan adr/ | Annajhma Rasyid Sulaiman & Deananda Hi.Muh.Arfah | Sudah |
+| B1 | laporan/B1-karakteristik.md | Annajhma Rasyid Sulaiman | Sudah |
+| B2 | laporan/B2-atribut-terukur.md | Putri Aulia Salsabila | Sudah |
+| B3 | laporan/B3-tiga-struktur.md dan diagram/ | Putri Aulia Salsabila | Sudah |
+| B4 | laporan/B4-iso-25010.md | Putri Aulia Salsabila | Sudah |
+| B5 | laporan/B5-trade-off.md | Putri Aulia Salsabila | Sudah |
+| BAB IV | laporan/BAB4-penutup.md | Andi Syawalia Zakira Fitri | Sudah |
+| Pustaka | laporan/daftar-pustaka.md | Andi Syawalia Zakira Fitri | Sudah |
 
 ## Laporan PDF terakhir
 
