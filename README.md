@@ -12,10 +12,10 @@ Konteks & Keputusan Arsitektur (Pertemuan 5) serta Karakteristik Arsitektur & At
 
 | No | Stambuk | Nama | Akun GitHub | Kode yang dikerjakan |
 |---|---|---|---|---|
-| 1 |13020240032|Putri Aulia Salsabila| @pauliasalsabila2-rgb |B2, B3, B4, B5,|
-| 2 |13020240058|Annajhma Rasyid Sulaiman | @annajhmarasyid2005 |A1, A2, A3, A4, A5,B1, B3,|
+| 1 |13020240032|Putri Aulia Salsabila| @pauliasalsabila2-rgb | B2, B3, B4, B5 |
+| 2 |13020240058|Annajhma Rasyid Sulaiman | @annajhmarasyid2005 | A1, A2, A3, A4, A5,B1, B3 |
 | 3 |13020240318| Andi Syawalia Zakira Fitri | @syawaliacawwax-ctrl | BAB I, BAB IV, Pustaka |
-| 4 |13020240258| Deananda Hi.Muh.Arfah | @13020240258-ux | A5, ADR1-ADR4,  |
+| 4 |13020240258| Deananda Hi.Muh.Arfah | @13020240258-ux | A5, ADR1-ADR4 |
 
 ## Peta berkas dan penanggung jawab
 
