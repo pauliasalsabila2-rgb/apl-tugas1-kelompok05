@@ -1,8 +1,6 @@
 
 # U1. Konteks dan ASR (Architecturally Significant Requirements)
 
-<!-- Penanggung jawab: Putri Aulia Salsabila -->
-
 ## 1. Ringkasan Layanan
 
 Layanan Presensi Kuliah pada LMS KALAM UMI merupakan bagian dari layanan akademik digital yang digunakan untuk mengelola dan mencatat kehadiran mahasiswa selama kegiatan perkuliahan. Layanan ini mendukung beberapa aktivitas utama, yaitu pembukaan sesi presensi oleh dosen, pelaksanaan presensi oleh mahasiswa, pemantauan status kehadiran, koreksi data presensi, serta penyediaan laporan rekapitulasi kehadiran.
