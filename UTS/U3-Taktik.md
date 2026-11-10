@@ -44,7 +44,7 @@ Taktik Performance diterapkan untuk mendukung skenario lonjakan akses hingga 3.0
 
 ### 3.1 Tujuan
 
-Menjaga kerahasiaan, keaslian, dan integritas data kehadiran mahasiswa serta mencegah tindakan kecurangan seperti penitipan presensi, penggunaan QR Code lama, dan manipulasi lokasi menggunakan fake GPS.
+Menjaga kerahasiaan, keaslian, dan integritas data kehadiran mahasiswa serta mencegah tindakan kecurangan seperti penitipan presensi.
 
 ### 3.2 Taktik yang Digunakan
 
