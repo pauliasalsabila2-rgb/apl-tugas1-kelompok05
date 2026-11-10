@@ -27,11 +27,8 @@ Berdasarkan hasil identifikasi stakeholder dan lima wawancara yang dilakukan pad
 | Stakeholder | Kebutuhan dan Kepentingan |
 |---|---|
 | Mahasiswa | Melakukan presensi dengan cepat, memperoleh konfirmasi kehadiran secara langsung, melihat riwayat presensi, dan mendapatkan kepastian pencatatan kehadiran. |
-| Dosen Pengampu | Membuka dan menutup sesi presensi, memantau kehadiran mahasiswa, serta melakukan koreksi presensi apabila terjadi kendala atau ketidaksesuaian data. |
+| Dose | Membuka dan menutup sesi presensi, memantau kehadiran mahasiswa, serta melakukan koreksi presensi apabila terjadi kendala atau ketidaksesuaian data. |
 | Staf Biro Akademik | Memperoleh data kehadiran yang akurat, konsisten, dan dapat digunakan untuk kebutuhan administrasi serta laporan kelayakan mengikuti UAS. |
-| Tim Pengembang (PDTI UMI) | Mengembangkan dan memelihara layanan presensi yang terintegrasi dengan basis data SIAKAD UMI serta mudah diperbarui. |
-| Tim Operasional Server | Menjaga kestabilan dan ketersediaan layanan, khususnya ketika terjadi peningkatan akses secara bersamaan pada jam perkuliahan. |
-| Auditor Mutu Internal UMI | Memastikan keabsahan data kehadiran, kesesuaian pelaksanaan perkuliahan, dan ketersediaan riwayat perubahan data sebagai bukti audit. |
 
 Berdasarkan kebutuhan tersebut, mahasiswa dan dosen menjadi pengguna utama yang berinteraksi langsung dengan layanan. Staf akademik, tim pengembang, tim operasional, dan auditor memiliki kepentingan terhadap keakuratan, keamanan, ketersediaan, serta keberlanjutan pengelolaan sistem.
 
