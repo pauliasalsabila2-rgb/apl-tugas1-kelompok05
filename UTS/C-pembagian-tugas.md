@@ -6,7 +6,7 @@ Cara mengambil tautan: buka tab **Commits**, klik commit yang dimaksud, salin al
 
 | No | Stambuk | Nama | Kode yang dikerjakan | Uraian pekerjaan individu | Bukti kontribusi (tautan) | Keterangan (Selesai / Tunda / Gagal) |
 |---|---|---|---|---|---|---|
-| 1 |  13020240032 | Putri Aulia Salsabila | U1, U4 | |  | Tunda |
-| 2 | 13020240058 | Annajhma Rasyid Sulaiman | U2, U3 | |  | Tunda |
+| 1 |  13020240032 | Putri Aulia Salsabila | U1, U4 | |  | Selesai |
+| 2 | 13020240058 | Annajhma Rasyid Sulaiman | U2, U3 | |  | Selesai |
 | 3 | 13020240318 | Andi Syawalia Zakira Fitri | U6 | |  | Tunda |
 | 4 | 13020240258 | Deananda Hi.Muh.Arfah | U5, U7 | |  | Tunda |
