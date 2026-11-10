@@ -1,4 +1,3 @@
-
 # U3. Taktik Arsitektur (Architectural Tactics)
 
 ## 1. Pendahuluan
@@ -44,7 +43,7 @@ Taktik Performance diterapkan untuk mendukung skenario lonjakan akses hingga 3.0
 
 ### 3.1 Tujuan
 
-Menjaga kerahasiaan, keaslian, dan integritas data kehadiran mahasiswa serta mencegah tindakan kecurangan seperti penitipan presensi.
+Menjaga kerahasiaan, keaslian, dan integritas data kehadiran mahasiswa serta mencegah tindakan kecurangan seperti penitipan presensi, penggunaan QR Code lama, dan manipulasi lokasi menggunakan fake GPS.
 
 ### 3.2 Taktik yang Digunakan
 
@@ -173,4 +172,3 @@ Taktik Performance menggunakan pengelolaan antrean permintaan dan mekanisme cach
 Selain itu, taktik pendukung Resilience diterapkan untuk mengantisipasi gangguan jaringan melalui penyimpanan sementara, pengiriman ulang, dan sinkronisasi data.
 
 Seluruh taktik tersebut menjadi dasar dalam menentukan pola arsitektur yang akan dibahas pada U4, sehingga struktur arsitektur yang dipilih dapat mendukung kebutuhan kualitas layanan presensi secara konsisten.
-
