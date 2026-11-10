@@ -1,1 +1,7 @@
 
+# U1. Konteks dan ASR (Architecturally Significant Requirements)
+
+## 1. Ringkasan Layanan
+
+Layanan Presensi Perkuliahan pada LMS Kalam UMI merupakan bagian dari subsistem Attendance Management yang digunakan untuk mengelola aktivitas kehadiran mahasiswa dalam kegiatan perkuliahan. Layanan ini mencakup proses pembukaan sesi presensi oleh dosen, pencatatan kehadiran mahasiswa, pengajuan atau koreksi data presensi apabila terjadi ketidaksesuaian, serta penyajian laporan kehadiran. Melalui layanan ini, dosen dapat mengelola sesi dan memantau kehadiran mahasiswa, sedangkan mahasiswa dapat melakukan presensi sesuai sesi perkuliahan yang tersedia. Data kehadiran yang tercatat menjadi dasar pemantauan partisipasi mahasiswa dan penyusunan laporan kehadiran perkuliahan.
+
