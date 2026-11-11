@@ -1,5 +1,5 @@
 
-# U6. EVALUASI
+# U6. Evaluasi
 
 ## 1. Pendahuluan
 
