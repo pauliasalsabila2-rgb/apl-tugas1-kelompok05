@@ -35,7 +35,7 @@ Berdasarkan kebutuhan tersebut, mahasiswa dan dosen menjadi pengguna utama yang 
 
 ## 4. Batasan Sistem
 
-Perancangan arsitektur layanan presensi kuliah memperhatikan beberapa batasan yang telah diidentifikasi pada Tugas Kelompok I.
+Perancangan arsitektur layanan presensi kuliah memperhatikan beberapa batasan yang telah diidentifikasi pada Tugas Kelompok 05.
 
 ### 4.1 Batasan Teknologi
 
