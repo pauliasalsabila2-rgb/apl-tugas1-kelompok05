@@ -1,78 +1,95 @@
-# U2. Skenario Atribut Kualitas
+# U3. Taktik Arsitektur
 
 ## 1. Pendahuluan
 
-Skenario atribut kualitas disusun berdasarkan tiga karakteristik pendorong utama (*architecture drivers*) yang telah ditetapkan pada U1, yaitu Performance (Kinerja), Security (Keamanan), dan Maintainability (Kemudahan Perawatan).
+Taktik arsitektur merupakan pendekatan teknis yang digunakan untuk memenuhi karakteristik kualitas sistem yang telah ditentukan pada U2. Pada layanan presensi kuliah LMS KALAM UMI, penerapan taktik difokuskan pada tiga karakteristik utama, yaitu kinerja (performance), keamanan (security), dan kemudahan perawatan (maintainability).
 
-Ketiga karakteristik tersebut dipilih karena memiliki pengaruh langsung terhadap kualitas layanan presensi kuliah LMS KALAM UMI. Performance berfokus pada kemampuan sistem menangani permintaan presensi secara bersamaan, Security berfokus pada perlindungan data dan pencegahan kecurangan presensi, sedangkan Maintainability berfokus pada kemudahan pengembangan dan pemeliharaan sistem.
+Pemilihan taktik didasarkan pada kebutuhan pengguna, hasil identifikasi stakeholder, serta permasalahan yang ditemukan pada layanan presensi. Setiap taktik dijelaskan berdasarkan cara kerjanya dan konsekuensi atau harga yang harus dibayar (trade-off) dalam penerapannya.
 
-Setiap skenario dirumuskan menggunakan enam komponen, yaitu sumber stimulus, stimulus, lingkungan, artefak, respons, dan ukuran respons.
+## 2. Taktik untuk Setiap Skenario
 
-## 2. Skenario Atribut Kualitas
+### 2.1 Skenario 1 – Kinerja (Performance)
 
-### 2.1 Skenario 1: Performance (Kinerja)
+**Taktik: Load Balancing dan Caching**
 
-**Tujuan:** Memastikan layanan presensi mampu menangani lonjakan permintaan mahasiswa secara bersamaan tanpa mengalami perlambatan yang mengganggu proses presensi.
+**Cara Kerja:**
 
-| Komponen | Deskripsi |
-|---|---|
-| Sumber Stimulus | Mahasiswa dan dosen yang mengakses layanan presensi LMS KALAM UMI. |
-| Stimulus | Sebanyak 3.000 mahasiswa mengirimkan permintaan presensi secara bersamaan pada waktu pergantian perkuliahan. |
-| Lingkungan | Kondisi beban puncak perkuliahan, khususnya sekitar pukul 08.00 WITA ketika beberapa sesi presensi dibuka secara bersamaan. |
-| Artefak | Server aplikasi, layanan presensi, Redis Cache, RabbitMQ, dan basis data PostgreSQL SIAKAD UMI. |
-| Respons | Sistem menerima dan memproses permintaan presensi secara efisien. Redis Cache membantu mengurangi beban akses berulang, sedangkan RabbitMQ mengelola antrean permintaan agar pemrosesan tidak membebani server dan basis data secara berlebihan. |
-| Ukuran Respons | Sistem mampu menangani 3.000 permintaan bersamaan, dengan 95% permintaan presensi memperoleh respons kurang dari 2 detik dan tingkat kegagalan permintaan sebesar 0% pada pengujian beban. |
+1. Load balancing digunakan untuk mendistribusikan permintaan akses presensi dari mahasiswa ke beberapa server atau instance aplikasi sehingga beban tidak terpusat pada satu server.
+2. Caching digunakan untuk menyimpan sementara informasi yang sering diakses, seperti jadwal perkuliahan dan informasi sesi presensi yang sedang berlangsung.
+3. Ketika banyak mahasiswa mengakses layanan presensi secara bersamaan, permintaan dapat dilayani secara lebih merata sehingga mengurangi beban pemrosesan pada server dan basis data.
+4. Sistem tetap melakukan validasi terhadap status sesi presensi sebelum menyimpan kehadiran mahasiswa agar data yang dicatat sesuai dengan sesi yang aktif.
 
-**Penjelasan:**
+**Harga yang Dibayar (Trade-off):**
 
-Skenario Performance berfokus pada permasalahan perlambatan akses yang terjadi ketika banyak mahasiswa melakukan presensi secara bersamaan. Kondisi tersebut membutuhkan arsitektur yang mampu mengelola lonjakan permintaan tanpa menyebabkan penurunan kinerja layanan. Penggunaan Redis Cache dan RabbitMQ menjadi alternatif solusi untuk membantu mengurangi beban server dan mengatur pemrosesan permintaan presensi. Pengujian dilakukan menggunakan *load testing* dengan Apache JMeter atau Locust untuk mensimulasikan 3.000 permintaan secara bersamaan.
+- Membutuhkan sumber daya server tambahan untuk mendistribusikan beban permintaan.
+- Konfigurasi dan pemeliharaan load balancer menambah kompleksitas infrastruktur.
+- Data yang tersimpan dalam cache berpotensi tidak langsung mencerminkan perubahan terbaru sehingga diperlukan mekanisme pembaruan dan invalidasi cache.
 
-### 2.2 Skenario 2: Security (Keamanan)
+**Hasil yang Diharapkan:**
 
-**Tujuan:** Menjamin keamanan dan integritas data kehadiran mahasiswa serta mencegah tindakan kecurangan dalam proses presensi.
+Akses layanan presensi menjadi lebih responsif ketika terjadi lonjakan pengguna sehingga mahasiswa dapat melakukan presensi tanpa mengalami keterlambatan yang berlebihan.
 
-| Komponen | Deskripsi |
-|---|---|
-| Sumber Stimulus | Mahasiswa yang melakukan presensi, dosen yang membuka sesi, dan pengguna yang mencoba melakukan manipulasi presensi. |
-| Stimulus | Mahasiswa mencoba melakukan presensi menggunakan tangkapan layar QR Code milik mahasiswa lain, QR Code yang sudah kedaluwarsa, atau koordinat lokasi yang dimanipulasi menggunakan aplikasi fake GPS. |
-| Lingkungan | Proses presensi berlangsung ketika dosen telah membuka sesi perkuliahan dan mahasiswa mengakses layanan melalui perangkat bergerak di dalam maupun di luar area gedung perkuliahan UMI. |
-| Artefak | Modul autentikasi, Role-Based Access Control (RBAC), QR Code dinamis, validasi GPS dan geofencing, API presensi, serta basis data kehadiran. |
-| Respons | Sistem memverifikasi identitas dan hak akses pengguna, memeriksa masa berlaku QR Code, serta mencocokkan koordinat GPS dengan lokasi perkuliahan. Permintaan yang terindikasi menggunakan QR Code kedaluwarsa atau lokasi palsu ditolak sebelum data kehadiran disimpan. |
-| Ukuran Respons | QR Code diperbarui secara otomatis dengan masa berlaku maksimal 5 detik. Validasi lokasi menggunakan radius maksimal 15 meter dari titik tengah area gedung perkuliahan UMI. Sistem harus menolak 100% upaya penggunaan QR Code kedaluwarsa dan manipulasi lokasi yang diuji. Hak akses koreksi presensi hanya diberikan kepada pengguna yang memiliki kewenangan sesuai perannya. |
+### 2.2 Skenario 2 – Keamanan (Security)
 
-**Penjelasan:**
+**Taktik: Authentication, Role-Based Access Control (RBAC), dan Audit Logging**
 
-Skenario Security bertujuan menjaga keabsahan data kehadiran mahasiswa agar tidak terjadi manipulasi atau penyalahgunaan layanan presensi. Penggunaan QR Code dinamis dan validasi lokasi melalui GPS menjadi mekanisme pengamanan untuk mengurangi risiko penitipan absen dan penggunaan lokasi palsu. Selain itu, penerapan Role-Based Access Control (RBAC) memastikan setiap pengguna hanya dapat mengakses fitur sesuai dengan kewenangannya. Pengujian dilakukan melalui *penetration testing*, simulasi pemindaian QR Code yang telah kedaluwarsa, dan pengujian koordinat GPS menggunakan aplikasi *mock location*.
+**Cara Kerja:**
 
-### 2.3 Skenario 3: Maintainability (Kemudahan Perawatan)
+1. Authentication diterapkan untuk memastikan setiap pengguna harus melakukan login menggunakan akun yang telah terdaftar sebelum mengakses layanan presensi.
+2. Role-Based Access Control (RBAC) digunakan untuk membatasi hak akses berdasarkan peran pengguna, yaitu mahasiswa, dosen, dan staf akademik.
+3. Mahasiswa hanya dapat mengakses sesi presensi yang tersedia untuk perkuliahannya dan melakukan pencatatan kehadiran sesuai ketentuan.
+4. Dosen memiliki hak akses untuk membuka dan menutup sesi presensi, memantau kehadiran mahasiswa, serta melakukan koreksi apabila ditemukan ketidaksesuaian data.
+5. Staf akademik memperoleh akses terhadap informasi dan laporan presensi sesuai kewenangan administrasi yang diberikan.
+6. Audit logging digunakan untuk mencatat aktivitas penting, seperti login, pembukaan sesi, perubahan data presensi, dan koreksi kehadiran sehingga aktivitas tersebut dapat ditelusuri kembali.
+7. Komunikasi antara pengguna dan layanan dilindungi menggunakan HTTPS/TLS untuk mengurangi risiko penyadapan informasi selama proses pertukaran data.
 
-**Tujuan:** Memudahkan tim pengembang dalam melakukan perubahan aturan bisnis, perbaikan kesalahan, dan pemeliharaan layanan presensi tanpa mengganggu subsistem akademik lainnya.
+**Harga yang Dibayar (Trade-off):**
 
-| Komponen | Deskripsi |
-|---|---|
-| Sumber Stimulus | Tim pengembang dan pengelola teknologi informasi PDTI UMI. |
-| Stimulus | Terdapat perubahan aturan akademik, seperti penyesuaian batas waktu keterlambatan presensi atau persentase minimal kehadiran mahasiswa, sehingga diperlukan perubahan pada fungsi layanan presensi. |
-| Lingkungan | Lingkungan pengembangan (*development environment*) ketika tim pengembang melakukan pembaruan aturan bisnis dan pengujian sebelum perubahan diterapkan pada sistem operasional. |
-| Artefak | Modul layanan presensi, modul pengelolaan sesi, modul validasi kehadiran, API, dan lapisan integrasi dengan basis data SIAKAD UMI. |
-| Respons | Sistem memiliki struktur modul yang terpisah sehingga perubahan aturan bisnis dapat dilakukan pada modul terkait tanpa mengubah keseluruhan sistem atau mengganggu fungsi subsistem akademik lainnya. Setiap perubahan diuji melalui unit testing dan integration testing sebelum diterapkan. |
-| Ukuran Respons | Perubahan aturan bisnis presensi hanya memerlukan pembaruan maksimal 1 modul kode. Pengembang baru dapat memahami dan melakukan modifikasi kecil pada fungsi presensi dalam waktu kurang dari 4 jam kerja. Pengujian dilakukan dengan target code coverage minimal 80% untuk fungsi yang diuji. |
+- Proses autentikasi dan pemeriksaan hak akses menambah tahapan pemrosesan sehingga dapat sedikit memengaruhi waktu respons.
+- Pengelolaan hak akses setiap peran membutuhkan konfigurasi dan pemeliharaan secara berkala.
+- Audit logging membutuhkan ruang penyimpanan tambahan untuk mencatat aktivitas pengguna.
+- Penerapan HTTPS/TLS membutuhkan pengelolaan sertifikat digital dan konfigurasi keamanan secara berkala.
 
-**Penjelasan:**
+**Hasil yang Diharapkan:**
 
-Skenario Maintainability berfokus pada kemudahan pemeliharaan dan pengembangan layanan presensi dalam jangka panjang. Pembagian sistem ke dalam modul yang terstruktur memungkinkan tim pengembang PDTI UMI melakukan perubahan aturan bisnis tanpa harus mengubah keseluruhan sistem. Pengujian unit dan integrasi diperlukan untuk memastikan perubahan tidak menimbulkan kesalahan pada fungsi yang sudah berjalan. Pengukuran dilakukan melalui simulasi perubahan aturan presensi, pemeriksaan struktur kode, *code review*, dan analisis menggunakan SonarQube.
+Layanan presensi memiliki pembatasan akses yang jelas berdasarkan peran pengguna. Data kehadiran dan perubahan presensi dapat dilindungi serta ditelusuri sehingga mengurangi risiko akses tidak sah dan manipulasi data.
 
-## 3. Ringkasan Skenario Atribut Kualitas
+### 2.3 Skenario 3 – Kemudahan Perawatan (Maintainability)
 
-| No. | Karakteristik Pendorong | Fokus Skenario | Ukuran Respons Utama |
+**Taktik: Modularity dan Separation of Concerns**
+
+**Cara Kerja:**
+
+1. Sistem dibagi menjadi beberapa modul berdasarkan tanggung jawab masing-masing, seperti modul autentikasi, modul pengelolaan sesi presensi, modul pencatatan kehadiran, modul koreksi presensi, dan modul laporan.
+2. Setiap modul memiliki fungsi dan tanggung jawab yang jelas sehingga perubahan pada satu bagian tidak harus mengubah keseluruhan sistem.
+3. Pemisahan antara tampilan pengguna, logika bisnis, dan akses basis data diterapkan agar perubahan antarmuka tidak langsung memengaruhi proses pencatatan presensi.
+4. Aturan pengelolaan presensi, seperti ketentuan pembukaan sesi dan validasi kehadiran, ditempatkan pada modul logika bisnis sehingga lebih mudah diperbarui.
+5. Konfigurasi yang dapat berubah, seperti durasi sesi presensi dan aturan operasional, dikelola secara terpisah dari kode program agar penyesuaian tidak selalu membutuhkan perubahan pada banyak modul.
+6. Setiap modul dilengkapi dokumentasi dan pengujian agar pengembang dapat memahami fungsi sistem serta memastikan perubahan tidak merusak fungsi yang sudah berjalan.
+
+**Harga yang Dibayar (Trade-off):**
+
+- Perancangan modul membutuhkan waktu dan perencanaan struktur sistem yang lebih matang.
+- Pemisahan modul menambah kebutuhan pengelolaan komunikasi dan integrasi antarmodul.
+- Dokumentasi dan pengujian setiap modul membutuhkan waktu pemeliharaan tambahan.
+- Pembagian modul yang terlalu banyak dapat meningkatkan kompleksitas pengelolaan sistem.
+
+**Hasil yang Diharapkan:**
+
+Sistem lebih mudah dipelihara dan dikembangkan. Perubahan pada aturan presensi atau kebutuhan administrasi dapat dilakukan pada modul yang berkaitan tanpa harus mengubah keseluruhan sistem.
+
+## 3. Ringkasan Penerapan Taktik
+
+| Skenario | Taktik | Manfaat Utama | Harga yang Dibayar |
 |---|---|---|---|
-| 1 | Performance | Penanganan lonjakan permintaan presensi secara bersamaan. | 3.000 permintaan bersamaan, 95% respons kurang dari 2 detik, dan 0% tingkat kegagalan. |
-| 2 | Security | Perlindungan data kehadiran dan pencegahan kecurangan presensi. | QR Code maksimal 5 detik, radius lokasi maksimal 15 meter, dan penolakan 100% upaya manipulasi yang diuji. |
-| 3 | Maintainability | Kemudahan perubahan dan pemeliharaan modul layanan presensi. | Perubahan maksimal 1 modul, waktu modifikasi kurang dari 4 jam kerja, dan code coverage minimal 80%. |
+| Performance | Load Balancing dan Caching | Meningkatkan respons akses ketika terjadi lonjakan pengguna | Penambahan sumber daya dan kompleksitas infrastruktur |
+| Security | Authentication, RBAC, dan Audit Logging | Melindungi data serta membatasi akses berdasarkan peran | Tambahan proses validasi, penyimpanan log, dan pengelolaan hak akses |
+| Maintainability | Modularity dan Separation of Concerns | Memudahkan perubahan, pengembangan, dan pemeliharaan sistem | Membutuhkan perencanaan modul, dokumentasi, dan pengujian |
 
 ## 4. Kesimpulan
 
-Berdasarkan ketiga skenario atribut kualitas yang telah dirumuskan, Performance, Security, dan Maintainability menjadi aspek utama yang perlu diperhatikan dalam perancangan arsitektur layanan presensi kuliah LMS KALAM UMI.
+Berdasarkan ketiga karakteristik pendorong tersebut, penerapan taktik arsitektur pada layanan presensi kuliah LMS KALAM UMI diarahkan untuk menghasilkan sistem yang responsif, aman, dan mudah dipelihara.
 
-Skenario Performance menjadi prioritas karena secara langsung menjawab permasalahan perlambatan akses ketika mahasiswa melakukan presensi secara bersamaan. Skenario Security diperlukan untuk menjaga integritas data kehadiran dan mencegah kecurangan akademik, sedangkan Maintainability mendukung kemudahan pengembangan serta pemeliharaan sistem oleh tim pengelola teknologi informasi kampus.
+Pada aspek kinerja, load balancing dan caching digunakan untuk membantu mengatasi peningkatan beban akses presensi. Pada aspek keamanan, authentication, Role-Based Access Control, dan audit logging diterapkan untuk membatasi akses serta menjaga keterlacakan aktivitas pengguna. Pada aspek kemudahan perawatan, modularity dan separation of concerns digunakan untuk memisahkan tanggung jawab setiap bagian sistem sehingga perubahan dapat dilakukan secara lebih terarah.
 
-Ketiga skenario tersebut menjadi dasar dalam menentukan taktik arsitektur pada U3, pemilihan pola arsitektur pada U4, serta penyusunan desain dan evaluasi arsitektur pada bagian selanjutnya.
+Setiap taktik memiliki konsekuensi yang perlu dipertimbangkan dalam perancangan arsitektur. Oleh karena itu, pemilihan taktik harus memperhatikan keseimbangan antara kebutuhan kualitas sistem, sumber daya yang tersedia, dan kompleksitas penerapannya.
