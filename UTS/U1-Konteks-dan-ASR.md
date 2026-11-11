@@ -26,8 +26,8 @@ Berdasarkan hasil identifikasi stakeholder dan lima wawancara yang dilakukan pad
 
 | Stakeholder | Kebutuhan dan Kepentingan |
 |---|---|
-| Mahasiswa Aktif Semester 5 | Membutuhkan akses presensi yang cepat ketika terjadi lonjakan pengguna, notifikasi kehadiran secara langsung, dan riwayat presensi yang selalu diperbarui. | 
-| Mahasiswa Baru | Membutuhkan akses presensi yang responsif, tampilan yang mudah digunakan, serta pembaruan status kehadiran secara otomatis. |
+| Mahasiswa Aktif Semester 5 | Kecepatan akses saat lonjakan pengguna, notifikasi kehadiran, dan pembaruan riwayat presensi. | 
+| Mahasiswa Baru | Kemudahan memahami alur presensi, tampilan sederhana, petunjuk penggunaan, dan konfirmasi keberhasilan presensi. |
 | Dosen | Membuka dan menutup sesi presensi, memantau kehadiran mahasiswa, serta melakukan koreksi presensi apabila terjadi kendala atau ketidaksesuaian data. |
 | Staf Biro Akademik | Memperoleh data kehadiran yang akurat, konsisten, dan dapat digunakan untuk kebutuhan administrasi serta laporan kelayakan mengikuti UAS. |
 
