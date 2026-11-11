@@ -1,58 +1,50 @@
 U7. Architectural Decision Records (ADR)
-
 ADR-001: Penggunaan RabbitMQ untuk Pengiriman Pesan Asinkron
 Status: Diterima (Accepted)
 
 Context (Konteks):
-Layanan Presensi Kuliah LMS KALAM UMI mengalami lonjakan trafik ekstrem (beban puncak hingga 3.000 permintaan bersamaan) pada menit-menit awal jam perkuliahan (misal pukul 08.00 WITA). Akses langsung yang bersifat sinkron ke basis data utama PostgreSQL SIAKAD UMI menyebabkan bottleneck, peningkatan response time, hingga potensi down pada sistem.
+Layanan Presensi Kuliah LMS KALAM UMI mengalami lonjakan trafik ekstrem (beban puncak hingga 3.000 permintaan secara bersamaan) pada menit-menit awal jam pergantian perkuliahan. Akses langsung yang bersifat pemrosesan sinkron ke basis data utama PostgreSQL SIAKAD UMI berpotensi menyebabkan hambatan pemrosesan (bottleneck), peningkatan waktu tanggap (response time), hingga penurunan ketersediaan layanan.
 
 Decision (Keputusan):
-Kami memutuskan untuk menerapkan pemrosesan asinkron menggunakan Message Queue dengan teknologi RabbitMQ. Setiap transaksi presensi yang valid dari API Gateway akan diubah menjadi event dan dimasukkan ke dalam antrean RabbitMQ, kemudian diproses secara bertahap oleh Background Worker Group sebelum ditulis ke basis data PostgreSQL.
+Kami memutuskan untuk menerapkan pemrosesan asinkron menggunakan Message Queue dengan teknologi RabbitMQ. Setiap transaksi presensi yang terverifikasi di API Gateway diterbitkan sebagai event ke dalam antrean RabbitMQ, kemudian diproses secara bertahap oleh Background Worker Group sebelum dituliskan ke basis data relasional PostgreSQL.
 
 Consequences (Dampak/Konsekuensi):
 
 Positif:
 
-Beban akses ke basis data relasional PostgreSQL berkurang secara drastis pada jam sibuk.
+Beban penulisan langsung ke basis data utama PostgreSQL berkurang secara signifikan saat jam sibuk perkuliahan.
 
-Waktu tanggap (response time) bagi pengguna menjadi sangat cepat (< 2 detik) karena pengguna tidak perlu menunggu proses database write selesai.   
-U1-Konteks-dan-ASR.md
-+ 1
+Waktu tanggap (response time) bagi mahasiswa menjadi jauh lebih cepat (< 2 detik) karena pengguna tidak perlu menunggu proses penulisan basis data selesai.
 
-Sistem memiliki tingkat ketahanan (fault tolerance) yang lebih baik apabila basis data mengalami perlambatan sementara.
+Meningkatkan ketahanan sistem (fault tolerance) apabila basis data utama mengalami perlambatan pemrosesan sementara.
 
 Negatif (Harga yang Dibayar):
 
-Meningkatkan kompleksitas infrastruktur dan pemeliharaan karena adanya komponen middleware baru.   
-U4-Pola.md
+Meningkatkan kompleksitas arsitektur infrastruktur dan perawatan karena penambahan komponen middleware.
 
-Menerapkan Eventual Consistency, sehingga ada jeda waktu singkat (beberapa milidetik hingga detik) sebelum data presensi benar-benar tercatat di basis data utama SIAKAD UMI.
+Penerapan Eventual Consistency, sehingga terdapat jeda waktu singkat sebelum data presensi benar-benar tercatat secara permanen di basis data SIAKAD UMI.
 
 ADR-002: Implementasi Caching dengan Redis untuk Data Sesi Presensi
 Status: Diterima (Accepted)
 
 Context (Konteks):
-Setiap kali mahasiswa melakukan pemindaian QR Code presensi, sistem harus memverifikasi status aktif sesi perkuliahan, validitas QR Code dinamis (yang diperbarui tiap 5 detik), dan data jadwal perkuliahan. Jika verifikasi ini selalu membaca basis data utama PostgreSQL, maka basis data akan menerima ribuan kueri read berulang dalam waktu bersamaan.
+Setiap pemindaian QR Code presensi memerlukan verifikasi status aktif sesi perkuliahan, pengecekan keabsahan QR Code dinamis (yang diperbarui secara otomatis setiap 5 detik), serta validasi parameter geofencing lokasi. Apabila seluruh proses pemindaian melakukan kueri pembacaan langsung ke basis data PostgreSQL SIAKAD UMI, basis data akan mengalami lonjakan beban read query yang berlebihan.
 
 Decision (Keputusan):
-Kami memutuskan untuk mengimplementasikan In-Memory Caching menggunakan Redis. Data sesi perkuliahan yang sedang aktif, token/payload QR Code dinamis, dan parameter geofencing lokasi akan disimpan sementara di dalam Redis Cache.
+Kami memutuskan untuk mengimplementasikan In-Memory Caching menggunakan Redis. Data sesi perkuliahan aktif, token/payload QR Code dinamis, dan titik koordinat geofencing disimpan sementara pada Redis Cache.
 
 Consequences (Dampak/Konsekuensi):
 
 Positif:
 
-Proses pembacaan data sesi dan validasi QR Code menjadi jauh lebih cepat (latensi sangat rendah, < 10 ms).   
-U3-Taktik.md
+Pemrosesan kueri pembacaan data sesi dan validasi QR Code dapat dilakukan secara instan dengan latensi sangat rendah (< 10 ms).
 
-Mencegah query flooding ke basis data PostgreSQL untuk data yang bersifat sementara (ephemeral).   
-U1-Konteks-dan-ASR.md
-+ 1
+Mencegah penumpukan kueri (query flooding) ke basis data utama PostgreSQL untuk data yang bersifat sementara (ephemeral).
 
-Mendukung validasi QR Code dinamis 5 detik secara efisien dengan memanfaatkan fitur Time-To-Live (TTL) bawaan Redis.   
-U2-Skenario-atribut-kualitas.md
+Mendukung mekanisme validasi QR Code dinamis 5 detik secara efisien dengan memanfaatkan fitur Time-To-Live (TTL) bawaan Redis.
 
 Negatif (Harga yang Dibayar):
 
-Memerlukan mekanisme invalidsi cache (cache invalidation) yang tepat ketika dosen menutup atau mengubah sesi perkuliahan secara manual.
+Memerlukan mekanisme pembatalan cache (cache invalidation) yang tepat ketika dosen melakukan penutupan atau perubahan sesi perkuliahan secara manual.
 
-Menambah kebutuhan kapasitas RAM pada infrastruktur server untuk menampung in-memory data.
+Menambah kebutuhan alokasi memori (RAM) pada infrastruktur server untuk menampung data in-memory.
